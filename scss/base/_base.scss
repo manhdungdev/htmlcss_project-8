@@ -1,9 +1,3 @@
-:root {
-  --theme-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%)
-    saturate(5575%) hue-rotate(217deg) brightness(101%) contrast(95%);
-}
-
 *,
 *::before,
 *::after {
@@ -47,6 +41,3 @@ button {
   cursor: pointer;
 }
 
-.icon {
-  filter: var(--icon-color);
-}

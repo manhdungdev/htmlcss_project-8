@@ -1,0 +1,14 @@
+html {
+  --theme-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%)
+    saturate(5575%) hue-rotate(217deg) brightness(101%) contrast(95%);
+  --header-bg-color: #eee;
+  --btn-bg-color: #fff;
+  --header-separate-color: #ededf6;
+  --btn-shadow: rgba(237, 237, 246, 0.2);
+  --avt-shadow: rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  filter: var(--icon-color);
+}
