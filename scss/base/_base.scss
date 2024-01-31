@@ -1,32 +1,52 @@
-*, *::before, *::after{
-    box-sizing: border-box;
+:root {
+  --theme-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%)
+    saturate(5575%) hue-rotate(217deg) brightness(101%) contrast(95%);
 }
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    font-size: 1.6rem;
-    font-family: "Gordita", sans-serif;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
+body {
+  font-size: 1.6rem;
+  font-family: "Gordita", sans-serif;
+  color: var(--theme-color);
+  height: 10000px;
 }
 
-a, input, select, textarea, button{
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    -webkit-tap-highlight-color: transparent;
+a {
+  text-decoration: none;
 }
 
-img, svg{
-    display: block;
+a,
+input,
+select,
+textarea,
+button {
+  color: inherit;
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
-button{
-    cursor: pointer;
+img,
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
