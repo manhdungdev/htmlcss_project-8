@@ -1,4 +1,6 @@
-%flexCenter{
+@use "../abstract";
+
+%flexCenter {
   display: flex;
   align-items: center;
 }
@@ -8,8 +10,6 @@
   justify-content: center;
   min-width: 50px;
   height: 50px;
-  border: none;
-  outline: none;
   background: var(--btn-bg-color);
   box-shadow: 0px 20px 60px 10px var(--btn-shadow);
   font-size: 1.5rem;
@@ -22,6 +22,14 @@
   background: var(--header-bg-color);
   padding: 30px 0;
 
+  @include abstract.breakpoint("md"){
+    padding: 16px 0;
+  }
+
+  @include abstract.breakpoint("lg"){
+    padding: 22px 0;
+  }
+
   &--sticky {
     position: sticky;
     top: 0;
@@ -30,6 +38,13 @@
 
   &__body {
     @extend %flexCenter;
+  }
+
+  &__menu {
+    display: none;
+    @include abstract.breakpoint("lg") {
+      display: block;
+    }
   }
 
   &__btns {
@@ -42,6 +57,10 @@
   &__search {
     @extend %btn;
     border-radius: 8px;
+
+    @include abstract.breakpoint("md"){
+      display: none;
+    }
   }
 
   &__btn {
@@ -55,6 +74,10 @@
     border-radius: 8px;
     overflow: hidden;
     background: var(--btn-bg-color);
+
+    @include abstract.breakpoint("md"){
+      display: none;
+    }
   }
 
   &__separate {
@@ -74,10 +97,19 @@
 }
 
 .nav {
+  margin-left: 144px;
+
+  @include abstract.breakpoint("xl") {
+    margin-left: 50px;
+  }
+
+  @include abstract.breakpoint("lg") {
+    display: none;
+  }
+
   &__list {
     @extend %flexCenter;
     column-gap: 30px;
-    margin-left: 144px;
   }
 
   &__link {

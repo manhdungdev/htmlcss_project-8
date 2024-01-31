@@ -1,0 +1,15 @@
+@use "../base";
+
+$breakpoints: base.$grid-breakpoints;
+@debug $breakpoints;
+
+@mixin breakpoint($key){
+    $width: map-get($breakpoints, $key);
+    @if $width and ($key != "xs"){
+        @media  screen and (max-width: ($width - 0.02)) {
+            @content;
+        }
+    } @else{
+        @error "The key is not valid in breakpoints list.";
+    }
+}
