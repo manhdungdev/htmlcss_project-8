@@ -1,0 +1,32 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Gordita", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a, input, select, textarea, button{
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img, svg{
+    display: block;
+}
+
+button{
+    cursor: pointer;
+}
