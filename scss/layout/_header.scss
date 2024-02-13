@@ -38,6 +38,11 @@
 
   &__body {
     @extend %flexCenter;
+
+    @include abstract.breakpoint("md") {
+      justify-content: space-between;
+    }
+
   }
 
   &__menu {
@@ -52,6 +57,9 @@
     column-gap: 20px;
     margin-left: auto;
     margin-right: 20px;
+    @include abstract.breakpoint("md"){
+      display: none;
+    }
   }
 
   &__search {

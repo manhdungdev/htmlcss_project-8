@@ -15,6 +15,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
   color: var(--theme-color);
+  background: var(--body-bg);
   height: 10000px;
 }
 
@@ -40,6 +41,7 @@ svg {
 button {
   border: none;
   outline: none;
+  background: transparent;
   cursor: pointer;
 }
 

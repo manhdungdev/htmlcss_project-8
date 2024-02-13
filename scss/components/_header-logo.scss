@@ -11,6 +11,10 @@
     column-gap: 10px;
   }
 
+  @include abstract.breakpoint("md") {
+    margin-left: 0;
+  }
+
   &__heading {
     font-size: 2.2rem;
     font-weight: 700;

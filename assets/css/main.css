@@ -65,6 +65,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
   color: var(--theme-color);
+  background: var(--body-bg);
   height: 10000px;
 }
 
@@ -90,6 +91,7 @@ svg {
 button {
   border: none;
   outline: none;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -1128,11 +1130,17 @@ html {
   --theme-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%)
     saturate(5575%) hue-rotate(217deg) brightness(101%) contrast(95%);
+  --body-bg: #F6F6F6;
   --header-bg-color: #eee;
   --btn-bg-color: #fff;
   --header-separate-color: #ededf6;
   --btn-shadow: rgba(237, 237, 246, 0.2);
   --avt-shadow: rgba(0, 0, 0, 0.08);
+}
+@media screen and (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 .icon {
@@ -1144,6 +1152,7 @@ html.dark {
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
     saturate(0%) hue-rotate(57deg) brightness(101%) contrast(102%);
   --header-bg-color: #171c28;
+  --body-bg: #292E39;
   --btn-bg-color: #292e39;
   --header-separate-color: #ededf6;
   --btn-shadow: rgba(0, 0, 0, 0.2);
@@ -1186,6 +1195,11 @@ html.dark {
   top: 0;
   z-index: 10;
 }
+@media screen and (max-width: 767.98px) {
+  .header__body {
+    justify-content: space-between;
+  }
+}
 .header__menu {
   display: none;
 }
@@ -1198,6 +1212,11 @@ html.dark {
   column-gap: 20px;
   margin-left: auto;
   margin-right: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .header__btns {
+    display: none;
+  }
 }
 .header__search {
   border-radius: 8px;
@@ -1267,6 +1286,11 @@ html.dark {
   .header-logo {
     margin-left: 40px;
     column-gap: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header-logo {
+    margin-left: 0;
   }
 }
 .header-logo__heading {
