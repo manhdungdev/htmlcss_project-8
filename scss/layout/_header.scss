@@ -37,6 +37,7 @@
   }
 
   &__body {
+    position: relative;
     @extend %flexCenter;
 
     @include abstract.breakpoint("md") {
@@ -117,11 +118,27 @@
 
   &__list {
     @extend %flexCenter;
-    column-gap: 30px;
+  }
+
+  &__item{
+    &:hover .dropdown{
+      display: block;
+    }
+
+    
+    &:first-child a{
+      padding-left: 0;
+    }
+
+    &:last-child a{
+      padding-right: 0;
+    }
   }
 
   &__link {
     @extend %flexCenter;
+    height: 50px;
+    padding: 0 15px;
     column-gap: 6px;
     font-size: 1.5rem;
     font-weight: 600;

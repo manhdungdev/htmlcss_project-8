@@ -1136,6 +1136,8 @@ html {
   --header-separate-color: #ededf6;
   --btn-shadow: rgba(237, 237, 246, 0.2);
   --avt-shadow: rgba(0, 0, 0, 0.08);
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1152,11 +1154,15 @@ html.dark {
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
     saturate(0%) hue-rotate(57deg) brightness(101%) contrast(102%);
   --header-bg-color: #171c28;
-  --body-bg: #292E39;
+  --body-bg: #292e39;
   --btn-bg-color: #292e39;
   --header-separate-color: #ededf6;
   --btn-shadow: rgba(0, 0, 0, 0.2);
   --avt-shadow: rgba(0, 0, 0, 0.08);
+  --dropdown-bg-color: #2f3441;
+  --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(8%)
+    saturate(1370%) hue-rotate(186deg) brightness(96%) contrast(93%);
 }
 
 .nav__link, .nav__list, .header__cta, .header__btns, .header__body, .header__btn, .header__search {
@@ -1194,6 +1200,9 @@ html.dark {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+.header__body {
+  position: relative;
 }
 @media screen and (max-width: 767.98px) {
   .header__body {
@@ -1267,10 +1276,18 @@ html.dark {
     display: none;
   }
 }
-.nav__list {
-  column-gap: 30px;
+.nav__item:hover .dropdown {
+  display: block;
+}
+.nav__item:first-child a {
+  padding-left: 0;
+}
+.nav__item:last-child a {
+  padding-right: 0;
 }
 .nav__link {
+  height: 50px;
+  padding: 0 15px;
   column-gap: 6px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -1307,6 +1324,28 @@ html.dark {
   .header-logo__img {
     width: 24px;
   }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  display: none;
+}
+.dropdown__body {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0 40px 90px 20px var(--dropdown-shadow-color);
+}
+.dropdown__body::before {
+  content: url("..//icon/dropdown-arrow.svg");
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50% 0;
+  filter: var(--dropdown-arrow-color);
 }
 
 /*# sourceMappingURL=main.css.map */
