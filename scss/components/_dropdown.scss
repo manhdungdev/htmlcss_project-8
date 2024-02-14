@@ -34,7 +34,6 @@
     border-right: 1px solid var(--menu-border-color);
     height: calc(min(596px, 100vh - 158px) - var(--padding) * 2);
     overflow-y: auto;
-
   }
 
   &-col {
@@ -45,10 +44,11 @@
       margin-top: 30px;
     }
 
-    &__item:hover .sub-menu{
+    &__item--active .sub-menu {
       display: grid;
     }
 
+    &__item--active > &__link,
     &__item:hover > &__link {
       color: #0071dc;
       font-weight: 500;
