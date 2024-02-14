@@ -1331,16 +1331,15 @@ html.dark {
 }
 
 .dropdown {
-  --max-height-val: min(596px, 100vh - 158px);
   position: absolute;
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
+  display: none;
 }
 .dropdown__body {
   --padding: 30px;
   position: relative;
-  max-height: var(--max-height-val);
   padding: var(--padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
@@ -1356,55 +1355,73 @@ html.dark {
 }
 
 .menu {
-  max-height: calc(var(--max-height-val) - var(--padding) * 2);
+  position: relative;
+  --menu-width: 292px;
 }
 .menu-main {
-  display: flex;
-  gap: 14px;
-  max-height: inherit;
-  width: 292px;
+  width: var(--menu-width);
   border-right: 1px solid var(--menu-border-color);
+  height: calc(min(596px, 100vh - 158px) - var(--padding) * 2);
   overflow-y: auto;
 }
-.menu-main__icon {
+.menu-col {
+  display: flex;
+  gap: 14px;
+}
+.menu-col + .menu-col {
+  margin-top: 30px;
+}
+.menu-col__item:hover .sub-menu {
+  display: grid;
+}
+.menu-col__item:hover > .menu-col__link {
+  color: #0071dc;
+  font-weight: 500;
+}
+.menu-col__icon {
   position: relative;
   width: 36px;
   height: 36px;
   flex-shrink: 0;
 }
-.menu-main__icon-bg {
+.menu-col__icon-symbol {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  background: #ffb700;
 }
-.menu-main__icon-img {
+.menu-col__icon-img {
   position: absolute;
   bottom: 0;
   right: 0;
   object-fit: cover;
   filter: var(--menu-icon-color);
 }
-.menu-main__content {
+.menu-col__content {
   flex: 1;
 }
-.menu-main__heading {
+.menu-col__heading {
   font-weight: 500;
   line-height: 1.5;
 }
-.menu-main__list {
+.menu-col__list {
   margin-top: 13px;
 }
-.menu-main__link {
+.menu-col__link {
   display: block;
   padding: 7px 0;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.4285;
 }
-.menu-main__link:hover {
-  color: #0071dc;
-  font-weight: 500;
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--menu-width);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  padding-left: 30px;
+  overflow-y: auto;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

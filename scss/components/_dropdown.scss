@@ -1,17 +1,14 @@
 .dropdown {
-  --max-height-val: min(596px, 100vh - 158px);
-
   position: absolute;
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
-  // display: none;
+  display: none;
 
   &__body {
     --padding: 30px;
 
     position: relative;
-    max-height: var(--max-height-val);
     padding: var(--padding);
     border-radius: 20px;
     background: var(--dropdown-bg-color);
@@ -29,15 +26,33 @@
 }
 
 .menu {
-  max-height: calc(var(--max-height-val) - var(--padding) * 2);
+  position: relative;
+  --menu-width: 292px;
 
   &-main {
+    width: var(--menu-width);
+    border-right: 1px solid var(--menu-border-color);
+    height: calc(min(596px, 100vh - 158px) - var(--padding) * 2);
+    overflow-y: auto;
+
+  }
+
+  &-col {
     display: flex;
     gap: 14px;
-    max-height: inherit;
-    width: 292px;
-    border-right: 1px solid var(--menu-border-color);
-    overflow-y: auto;
+
+    & + & {
+      margin-top: 30px;
+    }
+
+    &__item:hover .sub-menu{
+      display: grid;
+    }
+
+    &__item:hover > &__link {
+      color: #0071dc;
+      font-weight: 500;
+    }
 
     &__icon {
       position: relative;
@@ -45,11 +60,9 @@
       height: 36px;
       flex-shrink: 0;
 
-      &-bg {
+      &-symbol {
         width: 30px;
         height: 30px;
-        border-radius: 50%;
-        background: #ffb700;
       }
 
       &-img {
@@ -80,11 +93,21 @@
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 1.4285;
-
-      &:hover {
-        color: #0071dc;
-        font-weight: 500;
-      }
     }
   }
+}
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--menu-width);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+
+  padding-left: 30px;
+
+  overflow-y: auto;
+
+  display: none;
 }
