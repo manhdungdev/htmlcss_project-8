@@ -13,11 +13,16 @@ html {
 
   @include abstract.breakpoint(lg){
     --header-bg-color: #fff;
+    --header-shadow-color: #EDEDF633;
   }
 
   // Dropdown
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+
+  // Menu
+  --menu-border-color: #D2D1D6;
+ 
 }
 
 .icon {

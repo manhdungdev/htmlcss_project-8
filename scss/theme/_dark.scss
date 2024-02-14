@@ -1,3 +1,5 @@
+@use "../abstract";
+
 html.dark {
   --theme-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
@@ -9,9 +11,17 @@ html.dark {
   --btn-shadow: rgba(0, 0, 0, 0.2);
   --avt-shadow: rgba(0, 0, 0, 0.08);
 
+  @include abstract.breakpoint(lg) {
+    --header-shadow-color: #00000033;
+  }
+
   // Dropdown
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(8%)
     saturate(1370%) hue-rotate(186deg) brightness(96%) contrast(93%);
+
+  // Menu
+  --menu-border-color: #171c28;
+  --menu-icon-color: brightness(0) saturate(100%) invert(80%) sepia(4%) saturate(16%) hue-rotate(204deg) brightness(120%) contrast(100%);
 }
