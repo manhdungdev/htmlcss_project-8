@@ -1,7 +1,7 @@
 <div class="container">
     <div class="header__body">
         <!-- Menu on motab -->
-        <button class="header__menu">
+        <button class="header__menu js-toggle" toggle-target="#nav">
             <img src="./assets/icon/menu.svg" alt="Header menu" class="header__menu-icon icon" />
         </button>
 
@@ -13,7 +13,11 @@
             </div>
         </a>
 
-        <nav class="nav">
+
+        <nav id="nav" class="nav hide">
+            <button class="nav__btn-close js-toggle" toggle-target="#nav">
+                <img src="./assets/icon/nav-arrow.svg" alt="" class="nav__btn-icon">
+            </button>
             <ul class="nav__list js-dropdown-list">
                 <li class="nav__item">
                     <a href="#!" class="nav__link">
@@ -64,8 +68,8 @@
                                                                             <a href="#!" class="menu-col__link">Bags</a>
                                                                         </li>
                                                                         <li class="menu-col__item">
-                                                                            <a href="#!"
-                                                                                class="menu-col__link">Jelwery</a>
+                                                                            <a href="#!" class="menu-col__link">Jelwery
+                                                                            </a>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -1572,15 +1576,490 @@
                         Grocery
                         <img src="./assets/icon/nav-icon.svg" alt="" class="nav__icon icon" />
                     </a>
+                    <div class="dropdown js-dropdown">
+                        <div class="dropdown__body">
+                            <div class="menu">
+                                <div class="sub-menu sub-menu--not-main">
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-1.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-1.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Fashion deal</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Clothing</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Shoes</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Accessories</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bags</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Jelwery</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-5.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-5.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Fashion deal</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Smartphones</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Laptops</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Headphones</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Cameras</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Tablets</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Speakers</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Wearable
+                                                            Tech</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-2.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-2.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Electronics Discounts
+                                                </h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Furniture</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Kitchenware</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Decor</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bedding</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Appliances</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Lighting</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Outdoor
+                                                            Furniture</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Home
+                                                            Office</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bathroom</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Storage</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Cleaning
+                                                            Supplies
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-3.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-3.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Beauty Bargains</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Skincare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Makeup</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Haircare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fragrances</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Nail
+                                                            Care</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Beauty
+                                                            Tools</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Men's
+                                                            Grooming</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-4.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-4.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Sports & Outdoors
+                                                    Deals</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Skincare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fitness
+                                                            Equipment</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Outdoor
+                                                            Gear</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Sportswear</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Camping
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-6.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-6.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Wearable Technology
+                                                </h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Galaxy
+                                                            Watch</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Apple
+                                                            Watch</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fitness
+                                                            Trackers</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Virtual
+                                                            Reality</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Headphones</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav__item">
                     <a href="#!" class="nav__link">
                         Beauty
                         <img src="./assets/icon/nav-icon.svg" alt="" class="nav__icon icon" />
                     </a>
+                    <div class="dropdown js-dropdown">
+                        <div class="dropdown__body">
+                            <div class="menu">
+                                <div class="sub-menu sub-menu--not-main">
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-3.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-3.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Beauty Bargains</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Skincare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Makeup</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Haircare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fragrances</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Nail
+                                                            Care</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Beauty
+                                                            Tools</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Men's
+                                                            Grooming</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-4.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-4.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Sports & Outdoors
+                                                    Deals</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Skincare</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fitness
+                                                            Equipment</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Outdoor
+                                                            Gear</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Sportswear</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Camping
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-6.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-6.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Wearable Technology
+                                                </h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Galaxy
+                                                            Watch</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Apple
+                                                            Watch</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Fitness
+                                                            Trackers</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Virtual
+                                                            Reality</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Headphones</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-2.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-2.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Electronics Discounts
+                                                </h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Furniture</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Kitchenware</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Decor</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bedding</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Appliances</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Lighting</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Outdoor
+                                                            Furniture</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Home
+                                                            Office</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bathroom</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Storage</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Cleaning
+                                                            Supplies
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-menu__col">
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-1.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-1.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Fashion deal</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Clothing</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Shoes</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Accessories</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Bags</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Jelwery</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="menu-col">
+                                            <div class="menu-col__icon">
+                                                <img src="./assets/icon/category/cate-5.1.svg"
+                                                    class="menu-col__icon-symbol" alt="" />
+                                                <img src="./assets/icon/category/cate-5.2.svg"
+                                                    class="menu-col__icon-img" alt="" />
+                                            </div>
+                                            <div class="menu-col__content">
+                                                <h2 class="menu-col__heading">Fashion deal</h2>
+                                                <ul class="menu-col__list">
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Smartphones</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Laptops</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Headphones</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Cameras</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Tablets</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Speakers</a>
+                                                    </li>
+                                                    <li class="menu-col__item">
+                                                        <a href="#!" class="menu-col__link">Wearable
+                                                            Tech</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
+
+        <div class="overlay js-toggle" toggle-target="#nav"></div>
 
         <div class="header__btns">
             <button class="header__search">

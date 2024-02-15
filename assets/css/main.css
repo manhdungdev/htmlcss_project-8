@@ -1283,11 +1283,48 @@ html.dark {
 }
 @media screen and (max-width: 991.98px) {
   .nav {
-    display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 9;
+    background: #fff;
+    margin-left: 0;
+    padding: 20px 0;
+    translate: -100% 0;
+    transition: translate 0.5s;
+  }
+  .nav.show {
+    translate: 0 0;
+  }
+  .nav.show ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.nav__btn-close {
+  display: none;
+}
+@media screen and (max-width: 991.98px) {
+  .nav__btn-close {
+    display: block;
+    padding: 10px 40px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .nav__item:hover .dropdown {
   display: block;
+}
+@media screen and (max-width: 991.98px) {
+  .nav__item {
+    width: 100%;
+  }
+  .nav__item:hover .dropdown {
+    display: none;
+  }
 }
 .nav__link {
   height: 50px;
@@ -1296,6 +1333,30 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.466667;
+}
+@media screen and (max-width: 991.98px) {
+  .nav__link {
+    justify-content: space-between;
+    padding: 0 40px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 991.98px) {
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 8;
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+  }
 }
 
 .header-logo {
@@ -1422,6 +1483,11 @@ html.dark {
   padding-left: 30px;
   overflow-y: auto;
   display: none;
+}
+.sub-menu--not-main {
+  position: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /*# sourceMappingURL=main.css.map */
