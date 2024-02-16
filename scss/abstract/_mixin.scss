@@ -1,7 +1,7 @@
 @use "../base";
 
 $breakpoints: base.$grid-breakpoints;
-@debug $breakpoints;
+// @debug $breakpoints;
 
 @mixin breakpoint($key){
     $width: map-get($breakpoints, $key);

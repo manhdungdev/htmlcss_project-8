@@ -46,21 +46,11 @@
     }
   }
 
-  &__menu {
-    display: none;
-    @include abstract.breakpoint("lg") {
-      display: block;
-    }
-  }
-
   &__btns {
     @extend %flexCenter;
     column-gap: 20px;
     margin-left: auto;
     margin-right: 20px;
-    @include abstract.breakpoint("md") {
-      display: none;
-    }
   }
 
   &__search {
