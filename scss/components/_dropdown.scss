@@ -1,9 +1,17 @@
+@use "../abstract";
+
 .dropdown {
   position: absolute;
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
   display: none;
+
+  @include abstract.breakpoint(lg) {
+    position: initial;
+    display: block;
+    padding-top: 0;
+  }
 
   &__body {
     --padding: 30px;
@@ -22,6 +30,17 @@
       translate: -50% 0;
       filter: var(--dropdown-arrow-color);
     }
+
+    @include abstract.breakpoint(lg) {
+      padding: 0 40px;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+
+      &::before {
+        content: none;
+      }
+    }
   }
 }
 
@@ -34,6 +53,12 @@
     border-right: 1px solid var(--menu-border-color);
     height: calc(min(596px, 100vh - 158px) - var(--padding) * 2);
     overflow-y: auto;
+
+    @include abstract.breakpoint(lg) {
+      width: 100%;
+      height: auto;
+      border-right: none;
+    }
   }
 
   &-col {
@@ -74,6 +99,8 @@
       }
     }
 
+    
+
     &__content {
       flex: 1;
     }
@@ -81,10 +108,20 @@
     &__heading {
       font-weight: 500;
       line-height: 1.5;
+
+      @include abstract.breakpoint(lg){
+        margin-bottom: 26px;
+      }
     }
 
     &__list {
       margin-top: 13px;
+    }
+
+    @include abstract.breakpoint(lg) {
+      &__list {
+        margin-top: 0;
+      }
     }
 
     &__link {
@@ -110,6 +147,11 @@
   overflow-y: auto;
 
   display: none;
+
+  @include abstract.breakpoint(lg) {
+    position: initial;
+    grid-template-columns: 1fr;
+  }
 
   &--not-main {
     position: initial;
