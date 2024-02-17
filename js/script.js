@@ -102,7 +102,7 @@ window.addEventListener("template-loaded", handleActiveMenu);
 function handleActiveMenu() {
     const dropdowns = $$(".js-dropdown");
     const menus = $$(".js-menu-list");
-    const activeClass = "menu-col__item--active";
+    const activeClass = "menu-column__item--active";
 
     const removeActive = (menu) => {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
@@ -114,13 +114,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -132,6 +138,7 @@ function handleActiveMenu() {
         dropdown.onmouseleave = () => init();
     });
 }
+
 /**
  * JS toggle
  *

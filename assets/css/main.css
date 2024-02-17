@@ -1602,5 +1602,10 @@ html.dark {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+@media screen and (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
