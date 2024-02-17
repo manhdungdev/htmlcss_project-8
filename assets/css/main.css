@@ -1225,6 +1225,8 @@ html {
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --menu-border-color: #D2D1D6;
+  --sidebar-bg: #fff;
+  --sidebar-shadow-color: #C8C8C866;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1253,6 +1255,8 @@ html.dark {
     saturate(1370%) hue-rotate(186deg) brightness(96%) contrast(93%);
   --menu-border-color: #171c28;
   --menu-icon-color: brightness(0) saturate(100%) invert(80%) sepia(4%) saturate(16%) hue-rotate(204deg) brightness(120%) contrast(100%);
+  --sidebar-bg: #292E39;
+  --sidebar-shadow-color: #171C2866;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1359,14 +1363,16 @@ html.dark {
     position: fixed;
     inset: 0 50% 0 0;
     z-index: 9;
-    background: #fff;
+    background: var(--sidebar-bg);
     margin-left: 0;
+    border-radius: 0 20px 20px 0;
     padding: 20px 0;
     translate: -100% 0;
     transition: translate 0.5s;
   }
   .nav.show {
     translate: 0 0;
+    box-shadow: 0 40px 20px 90px var(--sidebar-shadow-color);
   }
   .nav.show ~ .overlay {
     opacity: 1;
@@ -1374,6 +1380,11 @@ html.dark {
   }
   .nav__item--active .nav__icon {
     rotate: 0deg;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .nav {
+    inset: 0 20% 0 0;
   }
 }
 .nav__btn-close {
@@ -1385,12 +1396,42 @@ html.dark {
     padding: 10px 40px;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .nav__btn-close {
+    padding: 10px 20px;
+  }
+}
+.nav-data {
+  align-items: center;
+  height: 50px;
+  padding: 0 40px;
+}
+@media screen and (max-width: 575.98px) {
+  .nav-data {
+    height: 44px;
+    padding: 0 20px;
+  }
+}
+.nav-data__infor, .nav-data__quantity {
+  margin-left: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+.nav-data__quantity {
+  margin-left: auto;
+}
 @media screen and (max-width: 991.98px) {
   .nav__list {
     flex-direction: column;
     align-items: flex-start;
     height: calc(100% - 24px);
     overflow-y: auto;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .nav__list {
+    height: calc(100% - 112px);
   }
 }
 .nav__item:hover .dropdown {
@@ -1422,6 +1463,12 @@ html.dark {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.5;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .nav__link {
+    height: 44px;
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 991.98px) {
