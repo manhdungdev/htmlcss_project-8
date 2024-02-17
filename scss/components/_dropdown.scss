@@ -40,6 +40,10 @@
         content: none;
       }
     }
+
+    @include abstract.breakpoint("sm") {
+      padding: 0 20px;
+    }
   }
 }
 
@@ -98,8 +102,6 @@
       }
     }
 
-    
-
     &__content {
       flex: 1;
     }
@@ -108,7 +110,7 @@
       font-weight: 500;
       line-height: 1.5;
 
-      @include abstract.breakpoint(lg){
+      @include abstract.breakpoint(lg) {
         margin-bottom: 26px;
       }
     }

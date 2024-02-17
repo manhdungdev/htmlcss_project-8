@@ -1427,6 +1427,7 @@ html.dark {
     align-items: flex-start;
     height: calc(100% - 24px);
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 @media screen and (max-width: 575.98px) {
@@ -1563,6 +1564,11 @@ html.dark {
   }
   .dropdown__body::before {
     content: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .dropdown__body {
+    padding: 0 20px;
   }
 }
 
