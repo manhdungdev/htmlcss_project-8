@@ -120,6 +120,10 @@
         visibility: visible;
       }
     }
+
+    &__item--active &__icon {
+      rotate: 0deg;
+    }
   }
 
   &__btn-close {
@@ -148,6 +152,14 @@
 
     @include abstract.breakpoint(lg) {
       width: 100%;
+
+      &:hover .dropdown {
+        display: none;
+      }
+
+      &--active .dropdown {
+        display: block !important;
+      }
     }
   }
 
@@ -166,6 +178,13 @@
       font-weight: 500;
       font-size: 1.6rem;
       line-height: 1.5;
+    }
+  }
+
+  &__icon {
+    @include abstract.breakpoint(lg) {
+      rotate: -90deg;
+      transition: rotate 0.3s;
     }
   }
 }

@@ -1372,6 +1372,9 @@ html.dark {
     opacity: 1;
     visibility: visible;
   }
+  .nav__item--active .nav__icon {
+    rotate: 0deg;
+  }
 }
 .nav__btn-close {
   display: none;
@@ -1397,6 +1400,12 @@ html.dark {
   .nav__item {
     width: 100%;
   }
+  .nav__item:hover .dropdown {
+    display: none;
+  }
+  .nav__item--active .dropdown {
+    display: block !important;
+  }
 }
 .nav__link {
   height: 50px;
@@ -1413,6 +1422,12 @@ html.dark {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.5;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .nav__icon {
+    rotate: -90deg;
+    transition: rotate 0.3s;
   }
 }
 
@@ -1473,7 +1488,6 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .dropdown {
     position: initial;
-    display: block;
     padding-top: 0;
   }
 }
@@ -1584,7 +1598,6 @@ html.dark {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--menu-width);
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
   padding-left: 30px;

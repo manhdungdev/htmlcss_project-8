@@ -9,7 +9,6 @@
 
   @include abstract.breakpoint(lg) {
     position: initial;
-    display: block;
     padding-top: 0;
   }
 
@@ -138,7 +137,7 @@
   position: absolute;
   inset: 0 0 0 var(--menu-width);
 
-  display: grid;
+  // display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
 

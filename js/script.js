@@ -102,7 +102,7 @@ window.addEventListener("template-loaded", handleActiveMenu);
 function handleActiveMenu() {
     const dropdowns = $$(".js-dropdown");
     const menus = $$(".js-menu-list");
-    const activeClass = "menu-column__item--active";
+    const activeClass = "menu-col__item--active";
 
     const removeActive = (menu) => {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
@@ -167,3 +167,15 @@ function initJsToggle() {
         };
     });
 }
+
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("nav__item--active");
+        };
+    });
+});
