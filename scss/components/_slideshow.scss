@@ -4,7 +4,6 @@
   --color: #fff;
 
   position: relative;
-  margin-top: 30px;
 
   &__body {
     display: flex;
@@ -17,7 +16,7 @@
     width: 100%;
     padding-top: 34%;
 
-    @include abstract.breakpoint(md) {
+    @include abstract.screen(md) {
       padding-top: 50%;
     }
   }
@@ -41,7 +40,7 @@
     align-items: center;
     column-gap: 18px;
 
-    @include abstract.breakpoint(md) {
+    @include abstract.screen(md) {
       width: 36.5%;
     }
   }
@@ -52,7 +51,7 @@
     line-height: 2.6rem;
     color: var(--color);
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
       font-size: 1.4rem;
       line-height: 2rem;
     }

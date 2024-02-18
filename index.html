@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -36,25 +36,68 @@
     <main class="main">
 
         <!-- Slide show -->
-        <div class="container">
-            <section class="slideshow">
-                <div class="slideshow__body">
-                    <div class="slideshow__item">
-                        <a href="#!" class="slideshow__link">
-                            <picture>
-                                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png">
-                                <img src="./assets/img/slideshow/item-1.png" alt="slideshow" class="slideshow__img">
-                            </picture>
-                        </a>
-                    </div>
+        <div class="container home">
+            <div class="home__container">
+                <section class="slideshow">
+                    <div class="slideshow__body">
+                        <div class="slideshow__item">
+                            <a href="#!" class="slideshow__link">
+                                <picture>
+                                    <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png">
+                                    <img src="./assets/img/slideshow/item-1.png" alt="slideshow" class="slideshow__img">
+                                </picture>
+                            </a>
+                        </div>
 
+                    </div>
+                    <div class="slideshow__manage">
+                        <span class="slideshow__num">1</span>
+                        <div class="slideshow__bar"></div>
+                        <span class="slideshow__num">5</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Browse category -->
+            <div class="home__container">
+                <h2 class="home__heading">Browse Categories</h2>
+
+                <div class="row row-cols-3 row-cols-md-1 home__cate">
+                    <div class="col">
+                        <article class="cate-item">
+                            <img src="./assets/img/category/item-1.png" alt="cate-item" class="cate-item__thumb">
+                            <div class="cate-item__infor">
+                                <h3 class="cate-item__heading">$24 - $150</h3>
+                                <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="cate-item">
+                            <img src="./assets/img/category/item-2.png" alt="cate-item" class="cate-item__thumb">
+                            <div class="cate-item__infor">
+                                <h3 class="cate-item__heading">$37 - $160</h3>
+                                <p class="cate-item__desc">Espresso arabica and robusta beans</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="cate-item">
+                            <img src="./assets/img/category/item-1.png" alt="cate-item" class="cate-item__thumb">
+                            <div class="cate-item__infor">
+                                <h3 class="cate-item__heading">$32 - $160</h3>
+                                <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-                <div class="slideshow__manage">
-                    <span class="slideshow__num">1</span>
-                    <div class="slideshow__bar"></div>
-                    <span class="slideshow__num">5</span>
-                </div>
-            </section>
+            </div>
+
+            <!-- Browse category -->
+            <div class="home__container">
+
+            </div>
+
         </div>
     </main>
 

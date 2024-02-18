@@ -6,12 +6,12 @@
   align-items: center;
   column-gap: 14px;
 
-  @include abstract.breakpoint("lg") {
+  @include abstract.screen("lg") {
     margin-left: 40px;
     column-gap: 10px;
   }
 
-  @include abstract.breakpoint("md") {
+  @include abstract.screen("md") {
     margin-left: 0;
   }
 
@@ -20,13 +20,13 @@
     font-weight: 700;
     line-height: 1.45455;
 
-    @include abstract.breakpoint("lg") {
+    @include abstract.screen("lg") {
       font-size: 1.8rem;
     }
   }
 
   &__img {
-    @include abstract.breakpoint("lg") {
+    @include abstract.screen("lg") {
       width: 24px;
     }
   }

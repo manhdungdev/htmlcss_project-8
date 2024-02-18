@@ -7,7 +7,7 @@
   padding-top: 54px;
   display: none;
 
-  @include abstract.breakpoint(lg) {
+  @include abstract.screen(lg) {
     position: initial;
     padding-top: 0;
   }
@@ -30,7 +30,7 @@
       filter: var(--dropdown-arrow-color);
     }
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
       padding: 0 40px;
       border-radius: 0;
       background: transparent;
@@ -41,7 +41,7 @@
       }
     }
 
-    @include abstract.breakpoint("sm") {
+    @include abstract.screen("sm") {
       padding: 0 20px;
     }
   }
@@ -57,7 +57,7 @@
     height: calc(min(596px, 100vh - 158px) - var(--padding) * 2);
     overflow-y: auto;
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
       width: 100%;
       height: auto;
       border-right: none;
@@ -110,7 +110,7 @@
       font-weight: 500;
       line-height: 1.5;
 
-      @include abstract.breakpoint(lg) {
+      @include abstract.screen(lg) {
         margin-bottom: 26px;
       }
     }
@@ -119,7 +119,7 @@
       margin-top: 13px;
     }
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
       &__list {
         margin-top: 0;
       }
@@ -149,7 +149,7 @@
 
   display: none;
 
-  @include abstract.breakpoint(lg) {
+  @include abstract.screen(lg) {
     position: initial;
     grid-template-columns: 1fr;
   }
@@ -159,7 +159,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
       grid-template-columns: 1fr;
     }
   }

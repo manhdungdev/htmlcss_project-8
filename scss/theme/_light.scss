@@ -2,18 +2,18 @@
 
 html {
   --theme-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%)
-    saturate(5575%) hue-rotate(217deg) brightness(101%) contrast(95%);
-  --body-bg: #F6F6F6;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5575%) hue-rotate(217deg) brightness(101%)
+    contrast(95%);
+  --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --btn-bg-color: #fff;
   --header-separate-color: #ededf6;
   --btn-shadow: rgba(237, 237, 246, 0.2);
   --avt-shadow: rgba(0, 0, 0, 0.08);
 
-  @include abstract.breakpoint(lg){
+  @include abstract.screen(lg) {
     --header-bg-color: #fff;
-    --header-shadow-color: #EDEDF633;
+    --header-shadow-color: #ededf633;
   }
 
   // Dropdown
@@ -21,11 +21,20 @@ html {
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
 
   // Menu
-  --menu-border-color: #D2D1D6;
+  --menu-border-color: #d2d1d6;
 
   // Sidebar
   --sidebar-bg: #fff;
-  --sidebar-shadow-color: #C8C8C866;
+  --sidebar-shadow-color: #c8c8c866;
+
+  // Cate-item
+  --cate-item-bg: #EEEEEE;
+  --cate-item-thumb-bg: #fff;
+  --cate-item-color: #000;
+
+  @include abstract.screen(md){
+    --cate-item-bg: #fff;
+  }
 }
 
 .icon {
