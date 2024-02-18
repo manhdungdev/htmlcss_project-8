@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -32,15 +32,37 @@
         load("#header", "./templates/header.html");
     </script>
 
-    <div class="container">
+    <!-- Main -->
+    <main class="main">
 
-        <h1>Content</h1>
+        <!-- Slide show -->
+        <div class="container">
+            <section class="slideshow">
+                <div class="slideshow__body">
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-1.png" alt="slideshow" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-1.png" alt="slideshow" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-1.png" alt="slideshow" class="slideshow__img">
+                    </div>
+                </div>
+                <div class="slideshow__manage">
+                    <span class="slideshow__num">1</span>
+                    <div class="slideshow__bar"></div>
+                    <span class="slideshow__num">5</span>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        <header id="footer"></header>
-        <script>
-            load("#footer", "./templates/footer.html");
-        </script>
-    </div>
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script>
+        load("#footer", "./templates/footer.html");
+    </script>
 </body>
 
 </html>
