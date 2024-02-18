@@ -1,3 +1,5 @@
+@use "../abstract";
+
 *,
 *::before,
 *::after {
@@ -46,3 +48,8 @@ button {
   cursor: pointer;
 }
 
+.container {
+  @include abstract.screen(sm) {
+    --grid-gutter-x: 40px !important;
+  }
+}

@@ -35,6 +35,19 @@ html {
   @include abstract.screen(md){
     --cate-item-bg: #fff;
   }
+
+  // Buttons
+
+  // Filter button
+  --filter-btn-color: #6C6C72;
+  --filter-btn-bg-color: #fff;
+
+  // Like button
+  --like-bg-color: #fff;
+
+  // Product
+  --product-bg-color: #fff;
+  --product-shadow-color: #EDEDF633;
 }
 
 .icon {
