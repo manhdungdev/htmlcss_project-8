@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -118,13 +118,19 @@
                                     <div class="filter-form__wrap">
                                         <div class="filter-form__group">
                                             <label for="" class="filter-form__heading">Minimum</label>
-                                            <input type="text" value="$30.00" class="filter-form__input">
+                                            <div class="filter-form__container filter-form__container--short ">
+                                                <input type="text" value="$30.00" class="filter-form__input"
+                                                    placeholder="Search brand name">
+                                            </div>
                                         </div>
                                         <div class="filter-form__group">
                                             <label for="" class="filter-form__heading">Maximum</label>
-                                            <input type="text" value="$100.00" class="filter-form__input">
+                                            <div class="filter-form__container filter-form__container--short ">
+                                                <input type="text" value="$100.00" class="filter-form__input"
+                                                    placeholder="Search brand name">
+                                            </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="filter__separate"></div>
@@ -133,12 +139,14 @@
                                     <div class="filter-select">
                                         <div class="filter-select__wrap">
                                             <span class="filter-select__val">500</span>
-                                            <button><img src="./assets/icon/filter-arrow.svg" alt="filter arrow" class="filter-select__img icon"></button>
+                                            <button><img src="./assets/icon/filter-arrow.svg" alt="filter arrow"
+                                                    class="filter-select__img icon"></button>
                                         </div>
                                         <div class="filter-select__separate"></div>
                                         <div class="filter-select__wrap filter-select__wrap--short">
                                             <span class="filter-select__val">Gram</span>
-                                            <button><img src="./assets/icon/filter-arrow.svg" alt="filter arrow" class="filter-select__img icon"></button>
+                                            <button><img src="./assets/icon/filter-arrow.svg" alt="filter arrow"
+                                                    class="filter-select__img icon"></button>
                                         </div>
                                     </div>
                                     <div class="filter-form__tags">
@@ -148,7 +156,22 @@
                                     </div>
                                 </div>
                                 <div class="filter__separate"></div>
-                                <div class="filter__col"></div>
+                                <div class="filter__col">
+                                    <label for="" class="filter__heading">Brand</label>
+                                    <div class="filter-form__wrap">
+                                        <div class="filter-form__container">
+                                            <input type="text" class="filter-form__input"
+                                                placeholder="Search brand name">
+                                            <img src="./assets/icon/filter-search.svg" alt="filter search"
+                                                class="filter-form__icon">
+                                        </div>
+                                    </div>
+                                    <div class="filter-form__tags">
+                                        <button class="filter-form__tag">Lavazza</button>
+                                        <button class="filter-form__tag">Netcafe</button>
+                                        <button class="filter-form__tag">Starbucks</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
