@@ -1249,6 +1249,7 @@ html {
   --filter-form-bg-color: #fff;
   --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
   --filter-form-input-color: #1A162E;
+  --filter-form-tag-bg-color: #f8f8f8;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1297,6 +1298,7 @@ html.dark {
   --filter-form-bg-color: #000;
   --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
   --filter-form-input-color: #fff;
+  --filter-form-tag-bg-color: #171C28;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1950,6 +1952,14 @@ html.dark {
   background: var(--filter-form-bg-color);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow-color));
 }
+.filter__row {
+  display: flex;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background: #eee;
+}
 .filter__heading {
   font-size: 2.2rem;
   font-weight: 500;
@@ -2004,6 +2014,49 @@ html.dark {
   line-height: 2rem;
   color: var(--filter-form--input-color);
   background: transparent;
+}
+.filter-form__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px 20px;
+}
+.filter-form__tag {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--filter-form-tag-bg-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #9E9DA8;
+  transition: color 0.25s;
+}
+.filter-form__tag:hover {
+  color: var(--theme-color);
+}
+.filter-select {
+  display: flex;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  padding: 6px 0;
+}
+.filter-select__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 158px;
+  padding: 0 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.filter-select__wrap--short {
+  width: 108px;
+}
+.filter-select__separate {
+  width: 1px;
+  background: #d2d1d6;
 }
 
 .home__container {
