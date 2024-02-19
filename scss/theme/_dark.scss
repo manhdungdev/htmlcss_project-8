@@ -50,8 +50,9 @@ html.dark {
   --product-shadow-color: #00000033;
 
   // Filter form
-  --filter-form-bg-color: #000;
-  --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
+  --filter-form-bg-color: #292E39;
+  --filter-form-shadow-color: #00000066;
   --filter-form-input-color: #fff;
   --filter-form-tag-bg-color: #171C28;
+  --filter-form-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(2296%) hue-rotate(183deg) brightness(100%) contrast(88%);
 }
