@@ -2,10 +2,18 @@
   position: relative;
   z-index: 1;
 
+  &__arrow {
+    position: absolute;
+    top: 39px;
+    right: 17px;
+    height: 21px;
+    z-index: 2;
+  }
+
   &__wrap {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 56px;
 
     border-radius: 20px;
     padding: 30px;
@@ -160,5 +168,27 @@
       width: 1px;
       background: #d2d1d6;
     }
+  }
+
+  &__footer {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__cancel,
+  &__submit {
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  &__cancel {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__submit {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
