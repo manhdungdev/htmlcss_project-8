@@ -1,0 +1,76 @@
+@use "../abstract";
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+  padding-bottom: 50px;
+
+  &-content,
+  &-media {
+    flex: 1;
+  }
+
+  &-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+    &__img {
+      width: min(424px, 100%);
+      object-fit: cover;
+    }
+
+    &__desc {
+      max-width: 414px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.6rem;
+    }
+  }
+
+  &-content {
+    &__wrap {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: min(460px, 100%);
+      padding-top: 50px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__heading {
+      margin-top: 50px;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 4.4rem;
+      color: (var--form-heading-color);
+    }
+
+    &__desc {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.2rem;
+      color: var(--form-color);
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__text{
+    margin-top: 108px;
+    color: var(--form-color);
+  }
+
+  &__link{
+    margin-left: 10px;
+  }
+
+  
+}
