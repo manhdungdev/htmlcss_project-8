@@ -54,6 +54,9 @@ html {
   --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
   --filter-form-input-color: #1A162E;
   --filter-form-tag-bg-color: #f8f8f8;
+
+  // Footer
+  --footer-bg-color: var(--header-bg-color);
 }
 
 .icon {
