@@ -1,8 +1,28 @@
 .form {
   width: 100%;
+  &:has(:invalid) &__submit {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 
   &__group {
     margin-top: 30px;
+
+    &:has(:invalid):has(input:not(:placeholder-shown)) {
+      .form__input-wrap {
+        border-color: red;
+        background: rgba(red, 0.1);
+      }
+
+      .form__error,
+      .form__input-error {
+        display: block;
+      }
+
+      .form__input-icon {
+        display: none;
+      }
+    }
   }
 
   &__input {
@@ -10,10 +30,9 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.6rem;
-    color: var(--form-input-color);
 
     &::placeholder {
-      color: inherit;
+      color: var(--form-input-color);
     }
 
     &-wrap {
@@ -21,16 +40,22 @@
       align-items: center;
       height: 50px;
       border-radius: 10px;
-      border: 1px solid #d2d1d6;
+      border: 2px solid #d2d1d6;
       padding: 12px;
 
-      &:focus-within{
-        border: 2px solid #0071DC;
+      &:focus-within {
+        border: 2px solid #0071dc;
       }
     }
 
-    &-icon {
+    &-icon,
+    &-error {
       margin-left: 10px;
+    }
+
+    &-error {
+      display: none;
+      animation: shake 0.5s;
     }
   }
 
@@ -41,14 +66,47 @@
   }
 
   &__checkbox {
+    position: relative;
     display: flex;
     align-items: center;
+    user-select: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      width: 19px;
+      height: 19px;
+      border-radius: 5px;
+      border: 2px solid #9e9da8;
+    }
+
+    &:has(:checked) {
+      &::before {
+        border-color: #ffb700;
+        background: #ffb700;
+      }
+
+      &::after {
+        top: 5px;
+        left: 2px;
+        width: 14px;
+        height: 7px;
+        border: 2px solid;
+        border-color: transparent transparent #fff #fff;
+        rotate: -45deg;
+      }
+    }
 
     &-label {
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 2.2rem;
       color: var(--form-color);
+      margin-left: 29px;
     }
   }
 
@@ -73,8 +131,17 @@
       margin-top: 30px;
     }
 
-    &-icon{
-        margin-right: 10px;
+    &-icon {
+      margin-right: 10px;
     }
+  }
+
+  &__error {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: red;
+    text-align: left;
+    display: none;
   }
 }

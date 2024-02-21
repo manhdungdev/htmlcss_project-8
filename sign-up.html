@@ -56,36 +56,44 @@
                     <form class="form auth__form" action="./index-logined.html">
                         <div class="form__group">
                             <div class="form__input-wrap">
-                                <input type="email" name="" id="" class="form__input" placeholder="Email">
+                                <input type="email" name="" id="" class="form__input" placeholder="Email" required>
                                 <img src="./assets/icon/form/email.svg" alt="email icon" class="form__input-icon">
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
                             </div>
+                            <p class="form__error">Email is not valid</p>
                         </div>
                         <div class="form__group">
                             <div class="form__input-wrap">
-                                <input type="password" name="" id="" class="form__input" placeholder="Password">
+                                <input type="password" name="" id="" class="form__input" placeholder="Password" required
+                                    minlength="6">
                                 <img src="./assets/icon/form/password.svg" alt="password icon" class="form__input-icon">
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
                             </div>
+                            <p class="form__error">Password has at least 6 characters</p>
                         </div>
                         <div class="form__group">
                             <div class="form__input-wrap">
-                                <input type="password" name="" id="" class="form__input" placeholder="Confirm password">
+                                <input type="password" name="" id="" class="form__input" placeholder="Confirm password"
+                                    required minlength="6">
                                 <img src="./assets/icon/form/password.svg" alt="password icon" class="form__input-icon">
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
                             </div>
+                            <p class="form__error">Confirm password is not valid</p>
                         </div>
 
                         <div class="form__group form__wrap">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input" hidden>
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
                             <a href="#!" class="form__link">Recovery password</a>
                         </div>
 
                         <div class="form__btns">
-                            <button class="form__btn btn btn--primary">Sign up</button>
+                            <button class="form__btn form__submit btn btn--primary">Sign up</button>
                             <button class="form__btn btn btn--outline btn--not-margin">
                                 <img src="./assets/icon/form/google.svg" alt="google icon" class="form__btn-icon">
-                                Sign in with Gmail</button>
+                                Sign in with Google</button>
                         </div>
                     </form>
                     <p class="auth__text">
