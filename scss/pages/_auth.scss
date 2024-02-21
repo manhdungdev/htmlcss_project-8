@@ -3,19 +3,35 @@
 .auth {
   display: flex;
   min-height: 100vh;
-  padding-bottom: 50px;
 
   &-content,
   &-media {
     flex: 1;
+    padding: 0 30px;
   }
 
   &-media {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 50px;
+
+    &__logo,
+    &__next-btn {
+      position: absolute;
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    &__logo {
+      top: 80px;
+    }
+
+    &__next-btn {
+      bottom: 50px;
+    }
 
     &__img {
       width: min(424px, 100%);
@@ -32,6 +48,20 @@
   }
 
   &-content {
+    background: var(--auth-content-bg-color);
+    padding-bottom: 50px;
+
+    @include abstract.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.3s;
+      overflow-y: auto;
+
+      &.hide {
+        translate: 100% 0;
+      }
+    }
     &__wrap {
       display: flex;
       align-items: center;
@@ -63,14 +93,16 @@
     margin-top: 30px;
   }
 
-  &__text{
+  &__text {
     margin-top: 108px;
     color: var(--form-color);
+
+    @include abstract.screen(md){
+      margin-top: 56px;
+    }
   }
 
-  &__link{
+  &__link {
     margin-left: 10px;
   }
-
-  
 }

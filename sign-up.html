@@ -29,21 +29,31 @@
     <main class="main">
         <div class="auth">
             <div class="auth-media">
+                <a href="#">
+                    <div class="logo d-none d-md-flex auth-media__logo">
+                        <img src="./assets/icon/logo.svg" alt="Logo" class="logo__img" />
+                        <h1 class="logo__heading">grocerymart</h1>
+                    </div>
+                </a>
                 <img src="./assets/img/auth-img.png" alt="" class="auth-media__img">
-                <p class="auth-media__desc"> The best of luxury brand values, high quality products, and innovative services</p>
+                <p class="auth-media__desc"> The best of luxury brand values, high quality products, and innovative
+                    services</p>
+                <button class="auth-media__next-btn js-toggle" toggle-target="#auth-content">
+                    <img src="./assets/icon/auth/next.svg" alt="next icon" class="auth-media__next d-none d-md-block">
+                </button>
             </div>
-            <div class="auth-content">
+            <div id="auth-content" class="auth-content hide">
                 <div class="auth-content__wrap">
                     <a href="#">
-                        <div class="header-logo">
-                            <img src="./assets/icon/logo.svg" alt="Logo" class="header-logo__img" />
-                            <h1 class="header-logo__heading">grocerymart</h1>
+                        <div class="logo">
+                            <img src="./assets/icon/logo.svg" alt="Logo" class="logo__img" />
+                            <h1 class="logo__heading">grocerymart</h1>
                         </div>
                     </a>
                     <h1 class="auth-content__heading">Sign Up</h1>
                     <p class="auth-content__desc">Let’s create your account and Shop like a pro and save money.</p>
-    
-                    <form class="form auth__form">
+
+                    <form class="form auth__form" action="./index-logined.html">
                         <div class="form__group">
                             <div class="form__input-wrap">
                                 <input type="email" name="" id="" class="form__input" placeholder="Email">
@@ -62,7 +72,7 @@
                                 <img src="./assets/icon/form/password.svg" alt="password icon" class="form__input-icon">
                             </div>
                         </div>
-    
+
                         <div class="form__group form__wrap">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="" id="" class="form__checkbox-input">
@@ -70,7 +80,7 @@
                             </label>
                             <a href="#!" class="form__link">Recovery password</a>
                         </div>
-    
+
                         <div class="form__btns">
                             <button class="form__btn btn btn--primary">Sign up</button>
                             <button class="form__btn btn btn--outline btn--not-margin">
@@ -86,6 +96,9 @@
             </div>
         </div>
     </main>
+    <script>
+        window.dispatchEvent(new Event("template-loaded"));
+    </script>
 </body>
 
 </html>

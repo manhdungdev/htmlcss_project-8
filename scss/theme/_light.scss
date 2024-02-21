@@ -28,18 +28,18 @@ html {
   --sidebar-shadow-color: #c8c8c866;
 
   // Cate-item
-  --cate-item-bg: #EEEEEE;
+  --cate-item-bg: #eeeeee;
   --cate-item-thumb-bg: #fff;
   --cate-item-color: #000;
 
-  @include abstract.screen(md){
+  @include abstract.screen(md) {
     --cate-item-bg: #fff;
   }
 
   // Buttons
 
   // Filter button
-  --filter-btn-color: #6C6C72;
+  --filter-btn-color: #6c6c72;
   --filter-btn-bg-color: #fff;
 
   // Like button
@@ -47,21 +47,24 @@ html {
 
   // Product
   --product-bg-color: #fff;
-  --product-shadow-color: #EDEDF633;
+  --product-shadow-color: #ededf633;
 
   // Filter form
   --filter-form-bg-color: #fff;
   --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
-  --filter-form-input-color: #1A162E;
+  --filter-form-input-color: #1a162e;
   --filter-form-tag-bg-color: #f8f8f8;
 
   // Footer
   --footer-bg-color: var(--header-bg-color);
 
   // Form
-  --form-heading-color: #1A162E;
-  --form-color: #9E9DA8;
-  --form-input-color: #D2D1D6;
+  --form-heading-color: #1a162e;
+  --form-color: #9e9da8;
+  --form-input-color: #d2d1d6;
+
+  // Authentication page
+  --auth-content-bg-color: #fff;
 }
 
 .icon {
