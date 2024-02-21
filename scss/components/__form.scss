@@ -1,3 +1,5 @@
+@use "../abstract";
+
 .form {
   width: 100%;
   &:has(:invalid) &__submit {
@@ -33,6 +35,10 @@
 
     &::placeholder {
       color: var(--form-input-color);
+    }
+
+    @include abstract.screen(sm) {
+      font-size: 1.6rem;
     }
 
     &-wrap {
@@ -107,6 +113,10 @@
       line-height: 2.2rem;
       color: var(--form-color);
       margin-left: 29px;
+
+      @include abstract.screen(sm) {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -115,6 +125,10 @@
     font-weight: 600;
     line-height: 2.2rem;
     color: #0071dc;
+
+    @include abstract.screen(sm) {
+      font-size: 1.4rem;
+    }
   }
 
   &__btns {

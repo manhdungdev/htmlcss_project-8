@@ -37,6 +37,23 @@
     z-index: 10;
   }
 
+  &-logo{
+    @include abstract.screen("lg") {
+      // margin-left: 40px;
+      column-gap: 10px;
+    }
+  
+    @include abstract.screen("md") {
+      margin-left: 0;
+    }
+
+    &__img {
+      @include abstract.screen("lg") {
+        width: 24px;
+      }
+    }
+  }
+
   &__body {
     position: relative;
     @extend %flexCenter;

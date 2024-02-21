@@ -77,7 +77,8 @@ input,
 select,
 textarea,
 button,
-img {
+img,
+label {
   color: inherit;
   font: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -1363,6 +1364,21 @@ html.dark {
   top: 0;
   z-index: 10;
 }
+@media screen and (max-width: 991.98px) {
+  .header-logo {
+    column-gap: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header-logo {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .header-logo__img {
+    width: 24px;
+  }
+}
 .header__body {
   position: relative;
 }
@@ -1721,17 +1737,6 @@ html.dark {
   align-items: center;
   column-gap: 14px;
 }
-@media screen and (max-width: 991.98px) {
-  .logo {
-    margin-left: 40px;
-    column-gap: 10px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .logo {
-    margin-left: 0;
-  }
-}
 .logo__heading {
   font-size: 2.2rem;
   font-weight: 700;
@@ -1740,11 +1745,6 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .logo__heading {
     font-size: 1.8rem;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .logo__img {
-    width: 24px;
   }
 }
 
@@ -2420,6 +2420,11 @@ html.dark {
 .form__input::placeholder {
   color: var(--form-input-color);
 }
+@media screen and (max-width: 575.98px) {
+  .form__input {
+    font-size: 1.6rem;
+  }
+}
 .form__input-wrap {
   display: flex;
   align-items: center;
@@ -2479,11 +2484,21 @@ html.dark {
   color: var(--form-color);
   margin-left: 29px;
 }
+@media screen and (max-width: 575.98px) {
+  .form__checkbox-label {
+    font-size: 1.4rem;
+  }
+}
 .form__link {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2.2rem;
   color: #0071dc;
+}
+@media screen and (max-width: 575.98px) {
+  .form__link {
+    font-size: 1.4rem;
+  }
 }
 .form__btns {
   margin-top: 50px;
@@ -2583,6 +2598,13 @@ html.dark {
   font-weight: 500;
   line-height: 2.6rem;
 }
+@media screen and (max-width: 575.98px) {
+  .auth-media__desc {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+  }
+}
 .auth-content {
   background: var(--auth-content-bg-color);
   padding-bottom: 50px;
@@ -2615,12 +2637,23 @@ html.dark {
   line-height: 4.4rem;
   color: var--form-heading-color;
 }
+@media screen and (max-width: 575.98px) {
+  .auth-content__heading {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+}
 .auth-content__desc {
   margin-top: 10px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.2rem;
   color: var(--form-color);
+}
+@media screen and (max-width: 575.98px) {
+  .auth-content__desc {
+    font-size: 1.4rem;
+  }
 }
 .auth__form {
   margin-top: 30px;
