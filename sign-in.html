@@ -26,9 +26,71 @@
 </head>
 
 <body>
-   <main class="main">
-    <h1>Sign in</h1>
-   </main>
+    <main class="main">
+        <div class="auth">
+            <div class="auth-media">
+
+                <img src="./assets/img/auth-img.png" alt="" class="auth-media__img">
+                <p class="auth-media__desc"> The best of luxury brand values, high quality products, and innovative
+                    services</p>
+
+            </div>
+            <div id="auth-content" class="auth-content ">
+                <div class="auth-content__wrap">
+                    <a href="#">
+                        <div class="logo">
+                            <img src="./assets/icon/logo.svg" alt="Logo" class="logo__img" />
+                            <h1 class="logo__heading">grocerymart</h1>
+                        </div>
+                    </a>
+                    <h1 class="auth-content__heading">Hello again</h1>
+                    <p class="auth-content__desc"> Welcome back to sign in. As a returning customer, you have access to
+                        your previously saved all information.</p>
+
+                    <form class="form auth__form" action="./index-logined.html">
+                        <div class="form__group">
+                            <div class="form__input-wrap">
+                                <input type="email" name="" id="" class="form__input" placeholder="Email" required value="abc_grocery@gmail.com">
+                                <img src="./assets/icon/form/email.svg" alt="email icon" class="form__input-icon">
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                            </div>
+                            <p class="form__error">Email is not valid</p>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__input-wrap">
+                                <input type="password" name="" id="" class="form__input" placeholder="Password" required
+                                    minlength="6">
+                                <img src="./assets/icon/form/password.svg" alt="password icon" class="form__input-icon">
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                            </div>
+                            <p class="form__error">Password has at least 6 characters</p>
+                        </div>
+                        <div class="form__group form__wrap">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input" hidden>
+                                <span class="form__checkbox-label">Set as default card</span>
+                            </label>
+                            <a href="#!" class="form__link">Recovery password</a>
+                        </div>
+
+                        <div class="form__btns">
+                            <button class="form__btn form__submit btn btn--primary">Sign In</button>
+                            <button class="form__btn btn btn--outline btn--not-margin">
+                                <img src="./assets/icon/form/google.svg" alt="google icon" class="form__btn-icon">
+                                Sign in with Google</button>
+                        </div>
+                    </form>
+                    <p class="auth__text">
+                        You have an account yet?
+                        <a href="./sign-up.html" class="form__link auth__link">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        window.dispatchEvent(new Event("template-loaded"));
+    </script>
 </body>
 
 </html>

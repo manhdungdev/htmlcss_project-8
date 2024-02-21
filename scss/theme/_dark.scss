@@ -50,10 +50,18 @@ html.dark {
   --product-shadow-color: #00000033;
 
   // Filter form
-  --filter-form-bg-color: #292E39;
+  --filter-form-bg-color: #292e39;
   --filter-form-shadow-color: #00000066;
   --filter-form-input-color: #fff;
-  --filter-form-tag-bg-color: #171C28;
-  --filter-form-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(2296%) hue-rotate(183deg) brightness(100%) contrast(88%);
+  --filter-form-tag-bg-color: #171c28;
+  --filter-form-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(2296%) hue-rotate(183deg)
+    brightness(100%) contrast(88%);
 
+  // Form
+  --form-heading-color: #b9babe;
+  --form-input-color: #b9babe;
+
+  // Authentication page
+  --auth-media-bg-color: #171c28;
+  --auth-content-bg-color: #292e39;
 }
