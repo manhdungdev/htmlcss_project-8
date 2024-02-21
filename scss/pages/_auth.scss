@@ -4,6 +4,10 @@
   display: flex;
   min-height: 100vh;
 
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+
   &-content,
   &-media {
     flex: 1;
@@ -107,7 +111,7 @@
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 2.2rem;
-      color: #9E9DA8;
+      color: #9e9da8;
 
       @include abstract.screen(sm) {
         font-size: 1.4rem;
@@ -128,7 +132,7 @@
 
   &__text {
     margin-top: 108px;
-    color: #9E9DA8;
+    color: #9e9da8;
 
     @include abstract.screen(md) {
       margin-top: 56px;
@@ -141,5 +145,13 @@
 
   &__link {
     margin-left: 10px;
+  }
+
+  &__message {
+    margin-top: 30px;
+  }
+
+  &__form-reset {
+    margin-top: 10px;
   }
 }
