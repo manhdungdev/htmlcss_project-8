@@ -1,0 +1,12 @@
+.product {
+  &-detail {
+    display: flex;
+    flex-direction: column;
+    background: var(--product-detail-bg);
+    height: 80vh;
+  }
+
+  &-container{
+    margin-top: 30px;
+  }
+}
