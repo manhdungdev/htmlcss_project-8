@@ -1271,6 +1271,8 @@ html {
   --auth-media-bg-color: #FAFAFD;
   --auth-content-bg-color: #fff;
   --product-detail-bg: #fff;
+  --product-infor-color: #1A162E;
+  --product-infor-bg-color: #f6f6f6;
   --breadscrumb-bg-color: #F6F6F6;
   --breadscrumb-shadow: #EDEDF633;
 }
@@ -1328,6 +1330,11 @@ html.dark {
   --form-input-color: #b9babe;
   --auth-media-bg-color: #171c28;
   --auth-content-bg-color: #292e39;
+  --product-detail-bg: #292e39;
+  --product-infor-color: #eee;
+  --product-infor-bg-color: #171C28;
+  --breadscrumb-bg-color: #171c28;
+  --breadscrumb-shadow: rgba(23, 28, 40, 0.2);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -2808,6 +2815,97 @@ html.dark {
 }
 .product-preview__thumbs-img--current {
   border-color: #ffb700;
+}
+.product-infor {
+  padding: 24px 60px 60px;
+  color: var(--product-infor-color);
+  background: var(--product-infor-bg-color);
+  --grid-gutter-x: 50px;
+}
+.product-infor__filter {
+  position: initial;
+}
+.product-infor__heading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.34;
+  margin-bottom: 30px;
+}
+.product-infor__container {
+  display: flex;
+  gap: 60px;
+}
+.product-infor__col {
+  flex: 1;
+}
+.product-infor__rating {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-infor__rating-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44444;
+}
+.product-infor__filter {
+  background: transparent;
+}
+.product-infor__filter .filter-form__tag,
+.product-infor__filter .filter-select_val {
+  font-size: 1.5rem;
+}
+.product-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 27px;
+}
+.product-item__heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.4444;
+}
+.product-item__desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4285;
+}
+.product-cart {
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #b9babe;
+}
+.product-cart__price {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.product-cart__price--big {
+  margin-top: 20px;
+  font-size: 2.6rem;
+  line-height: 1.38;
+}
+.product-cart__discount {
+  margin-left: 10px;
+  padding: 2px 8px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+  color: #67b044;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4285;
+}
+.product-cart__btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.product-cart__btn {
+  flex: 1;
+}
+.product-cart__btn--heart {
+  padding: 11px;
 }
 
 /*# sourceMappingURL=main.css.map */
