@@ -1,8 +1,25 @@
+@use "../abstract";
+
 .product {
   &-detail {
     display: flex;
     flex-direction: column;
     background: var(--product-detail-bg);
+  }
+
+  &-form {
+
+    @include abstract.screen(lg){
+      margin-top: 30px;
+    }
+    .form-select__val {
+      font-size: 1.5rem;
+    }
+
+    .form__tag {
+      background: var(--product-form-tag);
+      font-size: 1.5rem;
+    }
   }
 
   &-container {
@@ -66,9 +83,9 @@
     background: var(--product-infor-bg-color);
     --grid-gutter-x: 50px;
 
-
-    &__filter {
-      position: initial;
+    @include abstract.screen(xxl){
+      --grid-gutter-x: 30px;
+      padding: 24px 30px 30px;
     }
 
     &__heading {
@@ -76,11 +93,24 @@
       font-weight: 500;
       line-height: 1.34;
       margin-bottom: 30px;
+
+      @include abstract.screen(md){
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.44444;
+      }
+
+     
     }
 
     &__container {
       display: flex;
       gap: 60px;
+    }
+
+    &__wrapper {
+      margin-top: 30px;
     }
 
     &__col {
@@ -98,22 +128,19 @@
         line-height: 1.44444;
       }
     }
-
-    &__filter {
-      background: transparent;
-
-      .filter-form__tag,
-      .filter-select_val {
-        font-size: 1.5rem;
-      }
-    }
   }
 
   &-item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
+
+    @include abstract.screen(xl){
+      &--margin-lg{
+        margin-top: 30px;
+      }
+    }
 
     &__heading {
       font-size: 1.8rem;
@@ -162,10 +189,10 @@
       gap: 20px;
     }
 
-    &__btn{
+    &__btn {
       flex: 1;
 
-      &--heart{
+      &--heart {
         padding: 11px;
       }
     }
