@@ -72,9 +72,18 @@ html {
   --product-infor-bg-color: #f6f6f6;
   --product-form-tag: #EDEDF6;
 
+  @include abstract.screen(lg) {
+    --product-detail-bg: #fafafd;
+    --product-infor-bg-color: #fff;
+  }
+
   // Breadscrumbs
   --breadscrumb-bg-color: #F6F6F6;
   --breadscrumb-shadow: #EDEDF633;
+
+  @include abstract.screen(lg) {
+    --breadscrumb-bg-color: #fff;
+  }
 }
 
 .icon {
