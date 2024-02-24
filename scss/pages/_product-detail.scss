@@ -203,4 +203,45 @@
       }
     }
   }
+
+  &-remark {
+    padding-bottom: 30px;
+    &__list {
+      display: flex;
+      gap: 60px;
+    }
+
+    &__item {
+      color: #9e9da8;
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 1.4545;
+
+      &--active {
+        color: inherit;
+      }
+    }
+
+    &__contents {
+      padding-top: 30px;
+    }
+  }
+
+  &-content {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+
+    &__heading {
+      margin-bottom: 30px;
+      color: inherit;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    
+  }
 }
