@@ -68,11 +68,18 @@ html.dark {
   // Product detail page
   --product-detail-bg: #292e39;
   --product-infor-color: #eee;
-  --product-infor-bg-color: #171C28;
-  --product-form-tag: #292E39;
+  --product-infor-bg-color: #171c28;
+  --product-form-tag: #292e39;
+  --product-preview-bg-color: transparent;
 
+  @include abstract.screen(lg) {
+    --product-preview-bg-color: #171c28;
+  }
 
   // Breadscrumbs
   --breadscrumb-bg-color: #171c28;
   --breadscrumb-shadow: rgba(23, 28, 40, 0.2);
+
+  // Search bar
+  --search-bar-bg-color: #171c28;
 }
