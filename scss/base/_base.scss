@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -34,7 +38,6 @@ img,
 label {
   color: inherit;
   font: inherit;
-  -webkit-tap-highlight-color: transparent;
 }
 
 img,

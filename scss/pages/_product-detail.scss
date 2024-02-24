@@ -208,14 +208,30 @@
     padding-bottom: 30px;
     &__list {
       display: flex;
-      gap: 60px;
+      flex-wrap: wrap;
+      gap: 30px 60px;
+
+      @include abstract.screen(lg){
+        gap: 20px 40px;
+      }
     }
 
     &__item {
+      padding: 8px 0;
       color: #9e9da8;
       font-size: 2.2rem;
       font-weight: 500;
       line-height: 1.4545;
+      white-space: nowrap;
+      user-select: none;
+
+      @include abstract.screen(lg){
+        font-size: 1.8rem;
+      }
+
+      &:not(&--active) {
+        cursor: pointer;
+      }
 
       &--active {
         color: inherit;
@@ -241,7 +257,5 @@
       font-weight: 700;
       line-height: 1.42;
     }
-
-    
   }
 }
