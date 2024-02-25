@@ -104,6 +104,10 @@
 
     &-cart {
       position: relative;
+
+      &:hover .cart-wrapper{
+        display: block;
+      }
     }
   }
 

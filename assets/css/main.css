@@ -1292,7 +1292,8 @@ html {
   --review-card-bg-color: #fafafd;
   --text-content-hr-bg: #ebebeb;
   --cart-bg-color: #fff;
-  --cart-color: #1A162E;
+  --cart-color: #1a162e;
+  --cart-border-color: #ede9e9;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1376,6 +1377,7 @@ html.dark {
   --text-content-hr-bg: #5c6272;
   --cart-bg-color: #292e39;
   --cart-color: #B9BABE;
+  --cart-border-color: #727070;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1485,6 +1487,9 @@ html.dark {
 }
 .header__btn-cart {
   position: relative;
+}
+.header__btn-cart:hover .cart-wrapper {
+  display: block;
 }
 .header__cta {
   border-radius: 8px;
@@ -2805,16 +2810,29 @@ html.dark {
   border: 1px solid var(--text-content-hr-bg);
 }
 
-.cart {
+.cart-wrapper {
   position: absolute;
-  top: 60px;
-  right: 0;
+  right: -60px;
+  top: 50px;
+  padding-top: 30px;
+  display: none;
+}
+
+.cart {
   width: min(600px, 100vw);
   border-radius: 20px;
+  border: 2px solid var(--cart-border-color);
   padding: 30px;
   background: var(--cart-bg-color);
   color: var(--cart-color);
   overflow-y: auto;
+}
+.cart__arrow {
+  height: 21px;
+  position: absolute;
+  top: 13px;
+  right: 75px;
+  filter: var(--filter-form-arrow-color);
 }
 .cart-header {
   display: flex;
@@ -2835,7 +2853,7 @@ html.dark {
   padding-top: 100%;
   position: relative;
   border-radius: 10px;
-  border: 2px solid #ebebeb;
+  border: 2px solid #b1b0b0;
 }
 .cart-item__thumb {
   position: absolute;
@@ -2887,12 +2905,7 @@ html.dark {
 }
 .cart-footer__btn {
   min-width: 278px;
-  height: 46px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 99px;
-  background: #ffb700;
 }
 
 .home {
