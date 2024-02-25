@@ -4,15 +4,24 @@
   }
 
   &__breadscrumbs,
-  &-content {
+  &-content,
+  &-pay,
+  &-gift {
     background: var(--checkout-container-bg-color);
   }
 
-  &-content {
+  &-content,
+  &-pay,
+  &-gift {
     padding: 30px;
+    border-radius: 20px;
 
-    &__list{
-        margin-top: -30px;
+    &__list {
+      margin-top: -30px;
+    }
+
+    &__infor {
+      margin-top: 30px;
     }
   }
 
@@ -102,6 +111,107 @@
       justify-content: center;
       gap: 10px;
       min-height: 46px;
+    }
+  }
+
+  &-continue {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.44444;
+
+      &-icon {
+        rotate: 90deg;
+        transition: translate ease 0.25s;
+      }
+
+      &:hover &-icon {
+        translate: -6px;
+      }
+    }
+  }
+
+  &-infor {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__row + &__row {
+      margin-top: 10px;
+    }
+
+    &__title,
+    &__data {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.44444;
+
+      &--big {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45455;
+      }
+    }
+
+    &__separate {
+      height: 1px;
+      margin: 30px 0;
+      background: var(--checkout-item-border-color);
+    }
+  }
+
+  &-pay {
+    * {
+      font-size: 1.6rem;
+    }
+
+    &__separate {
+      margin: 14px 0;
+    }
+
+    &__btn {
+      margin-top: 48px;
+    }
+  }
+
+  &-gift {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__wrapper {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 14px;
+      background: rgba(#7644e1, 0.1);
+      box-shadow: 0 20px 60px 30px rgb(132 132 132 / 20%);
+    }
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.44444;
+    }
+
+    &__desc {
+      margin-top: 10px;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.4285;
     }
   }
 }
