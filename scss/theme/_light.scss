@@ -94,6 +94,9 @@ html {
   @include abstract.screen(xl) {
     --review-card-bg-color: #fff;
   }
+
+  // Text content
+  --text-content-hr-bg: #ebebeb;
 }
 
 .icon {

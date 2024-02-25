@@ -1290,6 +1290,7 @@ html {
   --breadscrumb-shadow: #ededf633;
   --search-bar-bg-color: #fff;
   --review-card-bg-color: #fafafd;
+  --text-content-hr-bg: #ebebeb;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1370,6 +1371,7 @@ html.dark {
   --breadscrumb-shadow: rgba(23, 28, 40, 0.2);
   --search-bar-bg-color: #171c28;
   --review-card-bg-color: #171c28;
+  --text-content-hr-bg: #5c6272;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -2774,13 +2776,13 @@ html.dark {
   text-align: center;
 }
 .text-content a {
-  color: #ffb700;
+  color: #0071dc;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2788,7 +2790,7 @@ html.dark {
 .text-content hr {
   border: none;
   margin: 50px 0;
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--text-content-hr-bg);
 }
 
 .home {
