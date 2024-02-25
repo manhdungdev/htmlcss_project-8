@@ -101,7 +101,11 @@ html {
   // Cart
   --cart-bg-color: #fff;
   --cart-color: #1a162e;
-  --cart-border-color: #ede9e9;
+  --cart-dropshadow-color: #ede9e9;
+
+  // Checkout page
+  --checkout-container-bg-color: #fff;
+  --checkout-item-border-color: #d2d1d6;
 }
 
 .icon {

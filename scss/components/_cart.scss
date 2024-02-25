@@ -8,16 +8,19 @@
 }
 
 .cart {
+  position: relative;
   width: min(600px, 100vw);
   border-radius: 20px;
   padding: 30px;
   background: var(--cart-bg-color);
   color: var(--cart-color);
+  filter: drop-shadow(2px 2px 6px var(--cart-dropshadow-color));
 
   &__arrow {
+    position: absolute;
     height: 21px;
     position: absolute;
-    top: 13px;
+    top: -18px;
     right: 75px;
     filter: var(--filter-form-arrow-color);
   }
@@ -72,7 +75,7 @@
     }
   }
 
-  &__separate{
+  &__separate {
     margin-top: 20px;
     height: 1px;
     background: #d2d1d6;
