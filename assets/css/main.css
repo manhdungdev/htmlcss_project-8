@@ -2821,11 +2821,9 @@ html.dark {
 .cart {
   width: min(600px, 100vw);
   border-radius: 20px;
-  border: 2px solid var(--cart-border-color);
   padding: 30px;
   background: var(--cart-bg-color);
   color: var(--cart-color);
-  overflow-y: auto;
 }
 .cart__arrow {
   height: 21px;
@@ -2874,6 +2872,11 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
+}
+.cart__separate {
+  margin-top: 20px;
+  height: 1px;
+  background: #d2d1d6;
 }
 .cart-body {
   margin-top: 20px;

@@ -10,11 +10,9 @@
 .cart {
   width: min(600px, 100vw);
   border-radius: 20px;
-  border: 2px solid var(--cart-border-color);
   padding: 30px;
   background: var(--cart-bg-color);
   color: var(--cart-color);
-  overflow-y: auto;
 
   &__arrow {
     height: 21px;
@@ -72,6 +70,12 @@
       font-weight: 500;
       line-height: 1.47;
     }
+  }
+
+  &__separate{
+    margin-top: 20px;
+    height: 1px;
+    background: #d2d1d6;
   }
 
   &-body {
