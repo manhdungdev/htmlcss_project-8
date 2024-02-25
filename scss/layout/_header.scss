@@ -37,12 +37,12 @@
     z-index: 10;
   }
 
-  &-logo{
+  &-logo {
     @include abstract.screen("lg") {
       // margin-left: 40px;
       column-gap: 10px;
     }
-  
+
     @include abstract.screen("md") {
       margin-left: 0;
     }
@@ -88,17 +88,28 @@
     column-gap: 10px;
     padding: 0 20px;
 
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
     @include abstract.screen(sm) {
       height: 40px !important;
       padding: 0 8px !important;
       font-size: 1.5rem !important;
+    }
+
+    &-cart {
+      position: relative;
     }
   }
 
   &__cta {
     @extend %flexCenter;
     border-radius: 8px;
-    overflow: hidden;
     background: var(--btn-bg-color);
 
     @include abstract.screen("md") {
