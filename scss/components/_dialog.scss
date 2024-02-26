@@ -1,0 +1,53 @@
+%full {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  @extend %full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    max-width: min(450px, 100% - 40px);
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--dialog--bg);
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    line-height: 2.2;
+    font-weight: 500;
+  }
+
+  &__btns {
+    margin-top: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px 12px;
+  }
+
+  &__btn--delete{
+    background: red;
+    color: #fff;
+  }
+
+  &__overlay {
+    @extend %full;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,6 +1,7 @@
 .search-bar {
   display: flex;
   align-items: center;
+  border-radius: 10px;
   background: var(--search-bar-bg-color);
 
   &__input {

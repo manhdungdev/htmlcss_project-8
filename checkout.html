@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -102,12 +102,12 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$47.00</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -152,12 +152,12 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$106.00</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -202,12 +202,12 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$38.65</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn">
+                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -304,6 +304,18 @@
     <script>
         load("#footer", "./templates/footer.html");
     </script>
+
+    <!-- Dialog -->
+    <div id="dialog" class="dialog hide">
+        <div class="dialog__content">
+            <div class="dialog__heading">Do you want to remove this item from shopping cart?</div>
+            <div class="dialog__btns">
+                <button toggle-target="#dialog" class="btn js-toggle btn--outline ">Cancel</button>
+                <button toggle-target="#dialog" class="btn js-toggle dialog__btn--delete ">Delete</button>
+            </div>
+        </div>
+        <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+    </div>
 </body>
 
 </html>

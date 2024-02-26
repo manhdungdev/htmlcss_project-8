@@ -1296,6 +1296,7 @@ html {
   --cart-dropshadow-color: #ede9e9;
   --checkout-container-bg-color: #fff;
   --checkout-item-border-color: #d2d1d6;
+  --dialog--bg: #fff;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1382,6 +1383,7 @@ html.dark {
   --cart-dropshadow-color: #727070;
   --checkout-container-bg-color: #171c28;
   --checkout-item-border-color: #4a4f59;
+  --dialog--bg: #2f3441;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -2646,6 +2648,7 @@ html.dark {
 .search-bar {
   display: flex;
   align-items: center;
+  border-radius: 10px;
   background: var(--search-bar-bg-color);
 }
 .search-bar__input {
@@ -2916,6 +2919,52 @@ html.dark {
 .cart-footer__btn {
   min-width: 278px;
   border-radius: 99px;
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__content {
+  max-width: min(450px, 100% - 40px);
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dialog--bg);
+}
+.dialog__heading {
+  font-size: 1.8rem;
+  line-height: 2.2;
+  font-weight: 500;
+}
+.dialog__btns {
+  margin-top: 30px;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px 12px;
+}
+.dialog__btn--delete {
+  background: red;
+  color: #fff;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .home {
@@ -3358,6 +3407,7 @@ html.dark {
   display: flex;
   align-items: flex-start;
   padding: 30px;
+  gap: 20px;
   border-bottom: 1px solid var(--checkout-item-border-color);
 }
 @media screen and (max-width: 767.98px) {
@@ -3365,16 +3415,15 @@ html.dark {
     border-bottom: none;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .checkout-item {
+    gap: 16px;
+  }
+}
 .checkout-item__thumb {
   width: 172px;
   height: 172px;
   object-fit: contain;
-}
-@media screen and (max-width: 1399.98px) {
-  .checkout-item__thumb {
-    width: 150px;
-    height: 150px;
-  }
 }
 @media screen and (max-width: 1399.98px) {
   .checkout-item__thumb {
@@ -3386,7 +3435,6 @@ html.dark {
   .checkout-item__thumb {
     width: 60px;
     height: 60px;
-    margin-right: 16px;
   }
 }
 .checkout-item__content {
@@ -3460,6 +3508,11 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-item__cta {
+    margin-top: 8px;
+  }
 }
 .checkout-item__btn {
   display: flex;
