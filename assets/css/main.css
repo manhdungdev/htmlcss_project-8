@@ -3338,8 +3338,18 @@ html.dark {
   padding: 30px;
   border-radius: 20px;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-content, .checkout-pay, .checkout-gift {
+    padding: 16px;
+  }
+}
 .checkout-content__list, .checkout-pay__list, .checkout-gift__list {
   margin-top: -30px;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-content__list, .checkout-pay__list, .checkout-gift__list {
+    margin-top: -16px;
+  }
 }
 .checkout-content__infor, .checkout-pay__infor, .checkout-gift__infor {
   margin-top: 30px;
@@ -3350,10 +3360,34 @@ html.dark {
   padding: 30px;
   border-bottom: 1px solid var(--checkout-item-border-color);
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-item:last-child {
+    border-bottom: none;
+  }
+}
 .checkout-item__thumb {
   width: 172px;
   height: 172px;
   object-fit: contain;
+}
+@media screen and (max-width: 1399.98px) {
+  .checkout-item__thumb {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 1399.98px) {
+  .checkout-item__thumb {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .checkout-item__thumb {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+  }
 }
 .checkout-item__content {
   flex: 1;
@@ -3367,6 +3401,17 @@ html.dark {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-item__content-right {
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-item__content {
+    flex-direction: column;
+  }
 }
 .checkout-item__heading, .checkout-item__desc {
   font-size: 1.8rem;
@@ -3389,6 +3434,13 @@ html.dark {
 }
 .checkout-item__controls {
   gap: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-item__controls {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
 .checkout-item__control {
   gap: 10px;
@@ -3483,7 +3535,6 @@ html.dark {
   height: 76px;
   border-radius: 14px;
   background: rgba(118, 68, 225, 0.1);
-  box-shadow: 0 20px 60px 30px rgba(132, 132, 132, 0.2);
 }
 .checkout-gift__heading {
   font-size: 1.8rem;

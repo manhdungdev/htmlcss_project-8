@@ -1,3 +1,5 @@
+@use "../abstract";
+
 .checkout {
   &-container {
     margin-top: 30px;
@@ -16,8 +18,16 @@
     padding: 30px;
     border-radius: 20px;
 
+    @include abstract.screen(md) {
+      padding: 16px;
+    }
+
     &__list {
       margin-top: -30px;
+
+      @include abstract.screen(md) {
+        margin-top: -16px;
+      }
     }
 
     &__infor {
@@ -31,10 +41,32 @@
     padding: 30px;
     border-bottom: 1px solid var(--checkout-item-border-color);
 
+    @include abstract.screen(md) {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
     &__thumb {
       width: 172px;
       height: 172px;
       object-fit: contain;
+
+      @include abstract.screen(xxl) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include abstract.screen(xxl) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include abstract.screen(sm) {
+        width: 60px;
+        height: 60px;
+        margin-right: 16px;
+      }
     }
 
     &__content {
@@ -50,6 +82,15 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
+
+        @include abstract.screen(md) {
+          align-items: flex-start;
+          margin-top: 16px;
+        }
+      }
+
+      @include abstract.screen(md) {
+        flex-direction: column;
       }
     }
 
@@ -81,6 +122,12 @@
 
     &__controls {
       gap: 20px;
+
+      @include abstract.screen(md) {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
     }
 
     &__control {
@@ -198,7 +245,6 @@
       height: 76px;
       border-radius: 14px;
       background: rgba(#7644e1, 0.1);
-      box-shadow: 0 20px 60px 30px rgb(132 132 132 / 20%);
     }
 
     &__heading {
