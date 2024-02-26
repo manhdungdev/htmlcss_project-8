@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en"">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping | Grocery Mart</title>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipping | Grocery Mart</title>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+<!-- Fonts -->
+<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+<!-- CSS -->
+<link rel="stylesheet" href="./assets/css/main.css">
 
-    <!-- Script -->
-    <script src="./js/script.js"></script>
+<!-- Script -->
+<script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -72,7 +72,10 @@
                 <div class="row gy-xl-3">
                     <div class="col-8 col-xl-12">
                         <div class="checkout-content">
-                            <h1 class="checkout-content__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24
+                            <h1 class="checkout-content__heading">1. Shipping, arrives between
+                                <span class="checkout-content__no-wrap">Mon, May 16</span>
+                                —
+                                <span class="checkout-content__no-wrap">Tue, May 24</span>
                             </h1>
 
                             <div class="checkout-infor__separate"></div>
@@ -83,7 +86,8 @@
                                         <h2 class="checkout__sub-heading">Shipping address</h2>
                                         <p class="address-header__desc">Where should we deliver your order?</p>
                                     </div>
-                                    <button class="address-header__btn btn btn--primary btn--rounded">
+                                    <button class="address-header__btn btn btn--primary btn--rounded js-toggle"
+                                        toggle-target="#modal-add-address">
                                         <img src="./assets/icon/btn-add.svg" alt="plus"
                                             class="address-header__btn-icon">
                                         Add a new address
@@ -92,13 +96,14 @@
 
                                 <div class="address__list">
                                     <!-- <p class="address__message">
-                                        Not address yet. <a href="#!" class="address__message-link"> Add a new address</a>
+                                        Not address yet. <a href="#!" class="address__message-link js-toggle" toggle-target="#modal-add-address"> Add a new address</a>
                                     </p> -->
                                     <article class="address-item ">
                                         <div class="address-item__left">
                                             <div class="address-item__check">
-                                                <label  class="address-item__checkbox">
-                                                    <input type="radio" name="check" checked class="address-item__input">
+                                                <label class="address-item__checkbox">
+                                                    <input type="radio" name="check" checked
+                                                        class="address-item__input">
                                                 </label>
                                             </div>
 
@@ -114,7 +119,8 @@
                                         </div>
 
                                         <div class="address-item__right">
-                                            <button class="address-item__btn">
+                                            <button class="address-item__btn js-toggle"
+                                                toggle-target="#modal-add-address">
                                                 <img src="./assets/icon/edit.svg" alt="edit"
                                                     class="address-item__btn-icon icon">
                                                 Edit
@@ -124,7 +130,7 @@
                                     <article class="address-item ">
                                         <div class="address-item__left">
                                             <div class="address-item__check">
-                                                <label  class="address-item__checkbox">
+                                                <label class="address-item__checkbox">
                                                     <input type="radio" name="check" class="address-item__input">
                                                 </label>
                                             </div>
@@ -141,10 +147,11 @@
                                         </div>
 
                                         <div class="address-item__right">
-                                            <button class="address-item__btn">
-                                                <img src="./assets/icon/edit.svg" alt="edit"
-                                                    class="address-item__btn-icon icon">
-                                                Edit
+                                            <button class="address-item__btn js-toggle"
+                                                toggle-target="#modal-add-address">
+                                            <img src="./assets/icon/edit.svg" alt="edit"
+                                                class="address-item__btn-icon icon">
+                                            Edit
                                             </button>
                                         </div>
                                     </article>
@@ -192,12 +199,14 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$47.00</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -242,12 +251,14 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$106.00</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -292,12 +303,14 @@
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$38.65</p>
                                             <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
                                                         checkout-item__icon">
                                                     Save
                                                 </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
+                                                <button class="checkout-item__btn js-toggle"
+                                                    toggle-target="#modal-remove">
                                                     <img src="./assets/icon/trash.svg" alt="trash"
                                                         class="checkout-item__icon">
                                                     Delete
@@ -395,16 +408,80 @@
         load("#footer", "./templates/footer.html");
     </script>
 
-    <!-- Dialog -->
-    <div id="dialog" class="dialog hide">
-        <div class="dialog__content">
-            <div class="dialog__heading">Do you want to remove this item from shopping cart?</div>
-            <div class="dialog__btns">
-                <button toggle-target="#dialog" class="btn js-toggle btn--outline ">Cancel</button>
-                <button toggle-target="#dialog" class="btn js-toggle dialog__btn--delete ">Delete</button>
+    <!-- Modal: confirm remove item -->
+    <div id="modal-remove" class="modal modal--small hide">
+        <!-- <button class="modal__close js-toggle" toggle-target="#modal-remove">&times;</button> -->
+        <div class="modal__content">
+            <div class="modal__heading">Do you want to remove this item from shopping cart?</div>
+            <div class="modal__btns">
+                <button toggle-target="#modal-remove" class="btn js-toggle btn--outline ">Cancel</button>
+                <button toggle-target="#modal-remove" class="btn js-toggle modal__btn--delete ">Delete</button>
             </div>
         </div>
-        <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+        <div class="modal__overlay js-toggle" toggle-target="#modal-remove"></div>
+    </div>
+
+    <!-- Modal: edit item -->
+    <div id="modal-add-address" class="modal  hide">
+        <div class="modal__content">
+            <div class="modal__heading">Add new shopping address</div>
+            <div class="modal__body">
+                <form action="" class="form">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__heading form__heading--small">Name</label>
+                            <div class="form__input-wrap form__input-wrap--small">
+                                <input type="email" name="email" id="name" class="form__input" minlength="2"
+                                    placeholder="Name" required>
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                            </div>
+                            <p class="form__error">Name must be at least 2 characters</p>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__heading form__heading--small">Phone</label>
+                            <div class="form__input-wrap form__input-wrap--small">
+                                <input type="tel" name="phone" id="phone" class="form__input" minlength="10"
+                                    placeholder="Phone" required>
+                                <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                            </div>
+                            <p class="form__error">Phone must be at least 10 numbers</p>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="address" class="form__heading form__heading--small">Adress</label>
+                        <div class="form__text-area form__text-area--small">
+                            <textarea name="address" id="address" class="form__text-area-input" minlength="2"
+                                placeholder="Address(Home and street)"></textarea>
+                            <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                        </div>
+                        <p class="form__error">Address must not be empty</p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="city" class="form__heading form__heading--small">City/District/Town</label>
+                        <div class="form__input-wrap form__input-wrap--small">
+                            <input type="text" name="add" id="city" class="form__input" minlength="10"
+                                placeholder="City/District/Town" required>
+                            <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+                        </div>
+                        <p class="form__error">Particular address must not be empty</p>
+                    </div>
+
+                    <div class="form__group form__wrap">
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="" id="" class="form__checkbox-input" hidden>
+                            <span class="form__checkbox-label">Set as default card</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__btns">
+                <button toggle-target="#modal-add-address" class="btn js-toggle btn--outline ">Cancel</button>
+                <button toggle-target="#modal-add-address" class="btn js-toggle btn--primary">Create</button>
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
     </div>
 </body>
 

@@ -27,7 +27,44 @@
     }
   }
 
-  &__input {
+  &__row {
+    display: flex;
+    gap: 30px;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  &__input-wrap,
+  &__text-area {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d2d1d6;
+    padding: 12px;
+    border-radius: 10px;
+
+    &:focus-within {
+      border: 2px solid #0071dc;
+    }
+  }
+
+  &__text-area {
+    height: 120px;
+    padding: 12px;
+
+    &--small {
+      height: 90px;
+    }
+
+    &-input {
+      height: 100%;
+      resize: none;
+    }
+  }
+
+  &__input,
+  &__text-area-input {
     width: 100%;
     font-size: 1.8rem;
     font-weight: 500;
@@ -40,17 +77,14 @@
     @include abstract.screen(sm) {
       font-size: 1.6rem;
     }
+  }
 
+  &__input {
     &-wrap {
-      display: flex;
-      align-items: center;
       height: 50px;
-      border-radius: 10px;
-      border: 2px solid #d2d1d6;
-      padding: 12px;
 
-      &:focus-within {
-        border: 2px solid #0071dc;
+      &--small {
+        height: 40px;
       }
     }
 
@@ -160,9 +194,15 @@
   }
 
   &__heading {
+    display: inline-block;
     font-size: 2.2rem;
     font-weight: 500;
     line-height: 3.2rem;
+
+    &--small {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
   }
 
   &-select {

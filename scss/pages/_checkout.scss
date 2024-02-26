@@ -53,6 +53,10 @@
     margin: 30px 0;
   }
 
+  &-content__no-wrap{
+    white-space: nowrap;
+  }
+
   &-item {
     display: flex;
     align-items: flex-start;
