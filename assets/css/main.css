@@ -107,6 +107,7 @@ textarea {
 :is(textarea, input):-webkit-autofill:hover {
   transition: background-color 1s 9999s;
   -webkit-text-fill-color: var(--theme-color);
+  caret-color: var(--theme-color);
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2498,6 +2499,7 @@ html.dark {
   }
 }
 .form__input-wrap {
+  position: relative;
   height: 50px;
 }
 .form__input-wrap--small {
@@ -2652,6 +2654,45 @@ html.dark {
 }
 .form__tag:hover {
   color: var(--theme-color);
+}
+.form__city {
+  position: absolute;
+  bottom: 44px;
+  left: 10px;
+  background: #fff;
+  border: 1px solid #d2d1d6;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 30px;
+  transition: opacity, visibility, translate;
+  transition-duration: 0.25s;
+}
+.form__city.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+.form__city-search {
+  height: 40px;
+  border-bottom: 1px solid #d2d1d6;
+  border-radius: 10px 10px 0 0 !important;
+}
+.form__city-list {
+  max-height: 250px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.form__city-item {
+  display: block;
+  padding: 6px 8px;
+  cursor: default;
+}
+.form__city-item--current {
+  background: orange;
+}
+.form__city-item:not(.form__city-item--current):hover {
+  cursor: pointer;
 }
 
 .message {

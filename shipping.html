@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset=" UTF-8">
@@ -422,7 +422,7 @@
     </div>
 
     <!-- Modal: edit item -->
-    <div id="modal-add-address" class="modal hide">
+    <div id="modal-add-address" class="modal show">
         <div class="modal__content">
             <form action="" class="form" id="address-form">
                 <div class="modal__heading">Add new shopping address</div>
@@ -461,9 +461,43 @@
                     <div class="form__group">
                         <label for="city" class="form__heading form__heading--small">City/District/Town</label>
                         <div class="form__input-wrap form__input-wrap--small">
-                            <input type="text" name="add" id="city" class="form__input" minlength="10"
+                            <input type="text" name="add" id="city" class="form__input js-toggle" toggle-target="#form-city" minlength="10"
                                 placeholder="City/District/Town" required>
                             <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
+
+                            <div id="form-city" class="form__city hide">
+                                <div class="search-bar form__city-search">
+                                    <input type="text" name="" id="" class="search-bar__input"
+                                        placeholder="Seach for city">
+                                    <button type="button">
+                                        <img src="./assets/icon/filter-search.svg" alt="search"
+                                            class="search-bar__icon icon">
+                                    </button>
+                                </div>
+                                <ul class="form__city-list">
+                                    <li class="form__city-item">Ha Noi</li>
+                                    <li class="form__city-item form__city-item--current">Ho Chi Minh</li>
+                                    <li class="form__city-item">Da Nang</li>
+                                    <li class="form__city-item">Hai Phong</li>
+                                    <li class="form__city-item">Quang Ninh</li>
+                                    <li class="form__city-item">Ha Noi</li>
+                                    <li class="form__city-item">Ho Chi Minh</li>
+                                    <li class="form__city-item">Da Nang</li>
+                                    <li class="form__city-item">Da Nang</li>
+                                    <li class="form__city-item">Hai Phong</li>
+                                    <li class="form__city-item">Quang Ninh</li>
+                                    <li class="form__city-item">Ha Noi</li>
+                                    <li class="form__city-item">Ho Chi Minh</li>
+                                    <li class="form__city-item">Da Nang</li>
+                                    <li class="form__city-item">Hai Phong</li>
+                                    <li class="form__city-item">Quang Ninh</li>
+                                    <li class="form__city-item">Ha Noi</li>
+                                    <li class="form__city-item">Ho Chi Minh</li>
+                                    <li class="form__city-item">Da Nang</li>
+                                    <li class="form__city-item">Hai Phong</li>
+                                    <li class="form__city-item">Quang Ninh</li>
+                                </ul>
+                            </div>
                         </div>
                         <p class="form__error">Particular address must not be empty</p>
                     </div>

@@ -94,6 +94,7 @@
 
   &__input {
     &-wrap {
+      position: relative;
       height: 50px;
 
       &--small {
@@ -273,6 +274,52 @@
 
     &:hover {
       color: var(--theme-color);
+    }
+  }
+
+  &__city {
+    position: absolute;
+    bottom: 44px;
+    left: 10px;
+    background: #fff;
+    border: 1px solid #d2d1d6;
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 30px;
+    transition: opacity, visibility, translate;
+    transition-duration: 0.25s;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      translate: 0 0;
+    }
+
+    &-search {
+      height: 40px;
+      border-bottom: 1px solid #d2d1d6;
+      border-radius: 10px 10px 0 0 !important;
+    }
+
+    &-list {
+      max-height: 250px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    &-item {
+      display: block;
+      padding: 6px 8px;
+      cursor: default;
+      &--current {
+        background: orange;
+      }
+
+      &:not(&--current):hover {
+        cursor: pointer;
+      }
     }
   }
 }

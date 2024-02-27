@@ -60,6 +60,7 @@ textarea {
 :is(textarea, input):-webkit-autofill:hover {
   transition: background-color 1s 9999s;
   -webkit-text-fill-color: var(--theme-color);
+  caret-color: var(--theme-color);
 }
 
 .container {
