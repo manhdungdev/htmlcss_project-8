@@ -211,3 +211,15 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("address-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        // Your form submission logic here
+        // For demonstration purpose, I'm just logging the form data
+        console.log("Form submitted with data:", new FormData(this));
+        // Close the modal
+        document.getElementById("modal-add-address").classList.remove("show");
+        document.getElementById("modal-add-address").classList.add("hide");
+    });
+});

@@ -10,6 +10,10 @@
   &__group {
     margin-top: 30px;
 
+    @include abstract.screen(md) {
+      margin-top: 20px;
+    }
+
     &:has(:invalid):has(input:not(:placeholder-shown)) {
       .form__input-wrap {
         border-color: red;
@@ -30,6 +34,15 @@
   &__row {
     display: flex;
     gap: 30px;
+
+    @include abstract.screen(md) {
+      gap: 20px;
+    }
+
+    @include abstract.screen(md) {
+      flex-direction: column;
+      gap: 0px;
+    }
 
     & > * {
       flex: 1;

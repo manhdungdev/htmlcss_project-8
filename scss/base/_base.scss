@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-*{
+* {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -54,16 +54,26 @@ textarea {
   cursor: pointer;
 }
 
+:is(textarea, input):-webkit-autofill,
+:is(textarea, input):-webkit-autofill:focus,
+:is(textarea, input):-webkit-autofill:active,
+:is(textarea, input):-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--theme-color);
+}
+
 .container {
   @include abstract.screen(sm) {
     --grid-gutter-x: 40px !important;
   }
 }
 
-i, em{
+i,
+em {
   font-style: italic;
 }
 
-b, strong{
+b,
+strong {
   font-weight: 600;
 }

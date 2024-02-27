@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"">
+<html lang="en" class="dark">
 
 <head>
     <meta charset=" UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shipping | Grocery Mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping | Grocery Mart</title>
 
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
-<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-<!-- Fonts -->
-<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 
-<!-- CSS -->
-<link rel="stylesheet" href="./assets/css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
 
-<!-- Script -->
-<script src="./js/script.js"></script>
+    <!-- Script -->
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -149,9 +149,9 @@
                                         <div class="address-item__right">
                                             <button class="address-item__btn js-toggle"
                                                 toggle-target="#modal-add-address">
-                                            <img src="./assets/icon/edit.svg" alt="edit"
-                                                class="address-item__btn-icon icon">
-                                            Edit
+                                                <img src="./assets/icon/edit.svg" alt="edit"
+                                                    class="address-item__btn-icon icon">
+                                                Edit
                                             </button>
                                         </div>
                                     </article>
@@ -422,16 +422,16 @@
     </div>
 
     <!-- Modal: edit item -->
-    <div id="modal-add-address" class="modal  hide">
+    <div id="modal-add-address" class="modal hide">
         <div class="modal__content">
-            <div class="modal__heading">Add new shopping address</div>
-            <div class="modal__body">
-                <form action="" class="form">
+            <form action="" class="form" id="address-form">
+                <div class="modal__heading">Add new shopping address</div>
+                <div class="modal__body">
                     <div class="form__row">
                         <div class="form__group">
                             <label for="name" class="form__heading form__heading--small">Name</label>
                             <div class="form__input-wrap form__input-wrap--small">
-                                <input type="email" name="email" id="name" class="form__input" minlength="2"
+                                <input type="text" name="email" id="name" class="form__input" minlength="2"
                                     placeholder="Name" required>
                                 <img src="./assets/icon/form/error.svg" alt="error icon" class="form__input-error">
                             </div>
@@ -474,12 +474,12 @@
                             <span class="form__checkbox-label">Set as default card</span>
                         </label>
                     </div>
-                </form>
-            </div>
-            <div class="modal__btns">
-                <button toggle-target="#modal-add-address" class="btn js-toggle btn--outline ">Cancel</button>
-                <button toggle-target="#modal-add-address" class="btn js-toggle btn--primary">Create</button>
-            </div>
+                </div>
+                <div class="modal__btns">
+                    <button toggle-target="#modal-add-address" class="btn js-toggle btn--outline ">Cancel</button>
+                    <button type="submit" toggle-target="#modal-add-address" class="btn  btn--primary">Create</button>
+                </div>
+            </form>
         </div>
         <div class="modal__overlay"></div>
     </div>

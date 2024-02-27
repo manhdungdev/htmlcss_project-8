@@ -101,17 +101,27 @@ textarea {
   cursor: pointer;
 }
 
+:is(textarea, input):-webkit-autofill,
+:is(textarea, input):-webkit-autofill:focus,
+:is(textarea, input):-webkit-autofill:active,
+:is(textarea, input):-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--theme-color);
+}
+
 @media screen and (max-width: 575.98px) {
   .container {
     --grid-gutter-x: 40px !important;
   }
 }
 
-i, em {
+i,
+em {
   font-style: italic;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 
@@ -2418,6 +2428,11 @@ html.dark {
 .form__group {
   margin-top: 30px;
 }
+@media screen and (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group:has(:invalid):has(input:not(:placeholder-shown)) .form__input-wrap {
   border-color: red;
   background: rgba(255, 0, 0, 0.1);
@@ -2432,6 +2447,17 @@ html.dark {
 .form__row {
   display: flex;
   gap: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .form__row {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .form__row {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 .form__row > * {
   flex: 1;
@@ -2994,9 +3020,14 @@ html.dark {
   border-radius: 20px;
   background: var(--modal--bg);
 }
+@media screen and (max-width: 767.98px) {
+  .modal__content {
+    padding: 16px;
+  }
+}
 .modal__body {
   padding: 0 16px;
-  max-height: 310px;
+  max-height: calc(100vh - 300px);
   overflow-y: auto;
 }
 .modal__heading {
