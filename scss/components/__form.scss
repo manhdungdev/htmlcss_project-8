@@ -14,7 +14,7 @@
       margin-top: 20px;
     }
 
-    &:has(:invalid):has(input:not(:placeholder-shown)) {
+    &:has(:invalid):has(.form__input:not(:placeholder-shown)) {
       .form__input-wrap {
         border-color: red;
         background: rgba(red, 0.1);
@@ -278,12 +278,16 @@
   }
 
   &__city {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    z-index: 1;
     bottom: 44px;
     left: 10px;
-    background: #fff;
+    background: var(--form-city-bg);
     border: 1px solid #d2d1d6;
     border-radius: 10px;
+    max-height: 300px;
 
     opacity: 0;
     visibility: hidden;
@@ -291,20 +295,45 @@
     transition: opacity, visibility, translate;
     transition-duration: 0.25s;
 
+    @include abstract.screen(sm) {
+      position: fixed;
+      inset: 0;
+      max-height: initial;
+      border-radius: 0px;
+    }
+
     &.show {
       opacity: 1;
       visibility: visible;
       translate: 0 0;
     }
 
+    &-close {
+      padding: 8px;
+      width: 44px;
+      height: 44px;
+      &-icon {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
     &-search {
       height: 40px;
       border-bottom: 1px solid #d2d1d6;
       border-radius: 10px 10px 0 0 !important;
+
+      @include abstract.screen(lg) {
+        height: 44px;
+      }
+
+      @include abstract.screen(lg) {
+        margin-top: 16px;
+      }
     }
 
     &-list {
-      max-height: 250px;
+      flex: 1;
       overflow-y: auto;
       overscroll-behavior: contain;
     }
@@ -313,11 +342,17 @@
       display: block;
       padding: 6px 8px;
       cursor: default;
+
+      @include abstract.screen(lg) {
+        padding: 12px 8px;
+      }
+
       &--current {
         background: orange;
       }
 
       &:not(&--current):hover {
+        background: var(--form-item-hover-bg);
         cursor: pointer;
       }
     }
