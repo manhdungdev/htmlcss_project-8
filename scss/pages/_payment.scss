@@ -1,0 +1,76 @@
+.payment {
+  counter-reset: heading;
+
+  &__sub-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44444;
+  }
+
+  &-item {
+    display: flex;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 20px;
+    background: var(--checkout-payment-bg);
+    cursor: pointer;
+
+    &__content {
+      display: flex;
+      gap: 20px;
+      flex: 1;
+    }
+
+    &__thumb {
+      width: 74px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.4444;
+    }
+
+    &__desc {
+      margin-top: 4px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    &__choice {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 8px;
+
+      &-data {
+        color: #9e9da8;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.4444;
+      }
+
+      &-input:checked + &-data {
+        color: inherit;
+      }
+
+      &-input::before {
+        content: url(../icon/payment-select-square.svg);
+      }
+
+      &-input:not(:checked)::before {
+        filter: var(--payment-select-border);
+      }
+    }
+  }
+}
+
+h2 {
+  counter-increment: heading;
+  &::before {
+    content: counter(heading) ". ";
+  }
+}

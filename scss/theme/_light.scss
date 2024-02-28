@@ -108,9 +108,13 @@ html {
   // Checkout page
   --checkout-container-bg-color: #fff;
   --checkout-item-border-color: #d2d1d6;
+  --checkout-payment-bg: #f6f6f6;
 
   // Dialog
   --modal--bg: #fff;
+
+  // Payment
+  --payment-select-border: brightness(0) saturate(100%) invert(78%) sepia(7%) saturate(359%) hue-rotate(206deg) brightness(81%) contrast(85%);
 }
 
 .icon {

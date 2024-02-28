@@ -61,7 +61,7 @@ html.dark {
   --form-heading-color: #b9babe;
   --form-input-color: #b9babe;
   --form-city-bg: #2f3441;
---form-item-hover-bg: #292e39;
+  --form-item-hover-bg: #292e39;
 
   // Authentication page
   --auth-media-bg-color: #171c28;
@@ -91,15 +91,20 @@ html.dark {
   // Text content
   --text-content-hr-bg: #5c6272;
 
-  // Cart 
+  // Cart
   --cart-bg-color: #292e39;
-  --cart-color: #B9BABE;
+  --cart-color: #b9babe;
   --cart-dropshadow-color: #727070;
 
   // Checkout page
   --checkout-container-bg-color: #171c28;
   --checkout-item-border-color: #4a4f59;
+  --checkout-payment-bg: #171c28;
 
-   // Dialog
-   --modal--bg: #2f3441;
+  // Dialog
+  --modal--bg: #2f3441;
+
+  // Payment
+  --payment-select-border: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(57deg)
+    brightness(101%) contrast(102%);
 }

@@ -318,6 +318,14 @@
       }
     }
 
+
+    &-heading{
+      text-align: center;
+      padding: 12px;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
     &-search {
       height: 40px;
       border-bottom: 1px solid #d2d1d6;
@@ -327,8 +335,10 @@
         height: 44px;
       }
 
-      @include abstract.screen(lg) {
-        margin-top: 16px;
+      @include abstract.screen(sm) {
+        border: 1px solid #ded1d6;
+        margin: 16px 30px 20px;
+        border-radius: 10px !important;
       }
     }
 

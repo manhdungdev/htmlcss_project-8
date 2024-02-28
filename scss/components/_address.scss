@@ -1,4 +1,3 @@
-
 @use "../abstract";
 
 .address {
@@ -8,9 +7,9 @@
     justify-content: space-between;
     gap: 16px;
 
-    @include abstract.screen(md){
-        flex-direction: column;
-        align-items: flex-start;
+    @include abstract.screen(md) {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &__btn {
@@ -43,8 +42,8 @@
     margin-top: 30px;
     gap: 16px;
 
-    @include abstract.screen(md){
-        flex-direction: column;
+    @include abstract.screen(md) {
+      flex-direction: column;
     }
 
     &__left {
@@ -68,6 +67,20 @@
       &:checked::before {
         content: url(../icon/checkbox-checked.svg);
       }
+
+      .address-item__input:not(:checked)::before {
+        filter: var(--icon-color);
+    }
+    }
+
+    &__infor {
+      flex: 1;
+    }
+
+    &__view {
+      display: inline-block;
+      padding: 8px;
+      color: #0071dc;
     }
 
     &__heading {
@@ -89,11 +102,11 @@
       align-items: center;
       gap: 30px;
 
-      @include abstract.screen(md){
+      @include abstract.screen(md) {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-    }
+      }
     }
 
     &__text {
@@ -113,5 +126,12 @@
       align-items: center;
       gap: 10px;
     }
+  }
+
+  &-payment {
+    align-items: center;
+    padding: 20px;
+    background: var(--checkout-payment-bg);
+    border-radius: 20px;
   }
 }
