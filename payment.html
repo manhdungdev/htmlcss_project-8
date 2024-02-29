@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset=" UTF-8">
@@ -77,7 +77,7 @@
 
             <div class="checkout-container">
                 <div class="row gy-xl-3">
-                    <div class="col-8 col-xl-12">
+                    <div class="col-8 col-lg-12">
                         <div class="checkout-content">
                             <div class="checkout-content__wrapper">
                                 <h2 class="checkout-content__heading">Shipping, arrives between
@@ -92,34 +92,34 @@
                                 </button>
                             </div>
 
-                            <div class="address">
-                                <div class="address__list">
+                            <div class="payment-prodct">
+                                <div class="payment-product__list">
                                     <!-- <p class="address__message">
                                         Not address yet. <a href="#!" class="address__message-link js-toggle" toggle-target="#modal-add-address"> Add a new address</a>
                                     </p> -->
-                                    <article class="address-item address-payment">
-                                        <div class="address-item__left">
-                                            <div class="address-item__infor">
-                                                <h3 class="address-item__heading">Imran Khan</h3>
-                                                <p class="address-item__desc">Museum of Rajas, Sylhet Sadar, Sylhet
+                                    <article class="payment-product__item">
+                                        <div class="payment-product__item-left">
+                                            <div class="payment-product__item-infor">
+                                                <h3 class="payment-product__item-heading">Items details</h3>
+                                                <p class="payment-product__item-desc">2 items</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-product__item-right">
+                                            <a href="./shipping.html" class="payment-product__item-view">View detail</a>
+                                        </div>
+                                    </article>
+                                    <article class="payment-product__item">
+                                        <div class="payment-product__item-left">
+                                            <div class="payment-product__item-infor">
+                                                <h3 class="payment-product__item-heading">Imran Khan</h3>
+                                                <p class="payment-product__item-desc">Museum of Rajas, Sylhet Sadar, Sylhet
                                                     3100.</p>
                                             </div>
                                         </div>
 
-                                        <div class="address-item__right">
-                                            <a href="./shipping.html" class="address-item__view">View detail</a>
-                                        </div>
-                                    </article>
-                                    <article class="address-item address-payment">
-                                        <div class="address-item__left">
-                                            <div class="address-item__infor">
-                                                <h3 class="address-item__heading">Item details</h3>
-                                                <p class="address-item__desc">2 items</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="address-item__right">
-                                            <a href="./shipping.html" class="address-item__view">View detail</a>
+                                        <div class="payment-product__item-right">
+                                            <a href="./shipping.html" class="payment-product__item-view">View detail</a>
                                         </div>
                                     </article>
                                 </div>
@@ -136,15 +136,16 @@
                             <div class="payment__list">
                                 <label>
                                     <article class="payment-item">
-                                        <div class="payment-item__content">
+                                        <div class="payment-item__img">
                                             <img src="./assets/img/payment/item-1.png" alt="payment thumb"
                                                 class="payment-item__thumb">
+                                            
+                                        </div>
+                                        <div class="payment-item__select">
                                             <div class="payment-item__infor">
                                                 <p class="payment-item__heading">Fedex Delivery</p>
                                                 <p class="payment-item__desc">Delivery: 2-3 days work</p>
                                             </div>
-                                        </div>
-                                        <div class="payment-item__select">
                                             <span class="address-item__checkbox payment-item__choice">
                                                 <input type="radio" name="check"
                                                     class="address-item__input payment-item__choice-input" checked>
@@ -156,18 +157,19 @@
 
                                 <label>
                                     <article class="payment-item">
-                                        <div class="payment-item__content">
+                                        <div class="payment-item__img">
                                             <img src="./assets/img/payment/item-2.png" alt="payment thumb"
                                                 class="payment-item__thumb">
+                                            
+                                        </div>
+                                        <div class="payment-item__select">
                                             <div class="payment-item__infor">
                                                 <p class="payment-item__heading">DHL Delivery</p>
                                                 <p class="payment-item__desc">Delivery: 2-3 days work</p>
                                             </div>
-                                        </div>
-                                        <div class="payment-item__select">
                                             <span class="address-item__checkbox payment-item__choice">
                                                 <input type="radio" name="check"
-                                                    class="address-item__input payment-item__choice-input">
+                                                    class="address-item__input payment-item__choice-input" checked>
                                                 <span class="payment-item__choice-data">$12.00</span>
                                             </span>
                                         </div>
@@ -176,10 +178,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 col-xl-12">
+                    <div class="col-4 col-lg-12">
 
                         <div class="checkout-infor checkout-pay">
-                            <h2 class="checkout__sub-heading">Payment Details</h2>
+                            <p class="checkout__sub-heading">Payment Details</p>
                             <p class="checkout-pay__desc">Complete your purchase item by providing your payment details
                                 order.</p>
                             <form class="form payment-form">
@@ -210,13 +212,11 @@
 
                                 <div class="form__group">
                                     <div class="form__input-wrap ">
-                                        <input type="text" name="" id="" class="form__input" placeholder="MM/YY"
-                                            >
-                                            <div class="payment-form__separate"></div>
-                                        <input type="text" name="" id="" class="form__input" placeholder="CVC"
-                                            >
+                                        <input type="text" name="" id="" class="form__input" placeholder="MM/YY">
+                                        <div class="payment-form__separate"></div>
+                                        <input type="text" name="" id="" class="form__input" placeholder="CVC">
                                     </div>
-                                   
+
                                 </div>
 
 

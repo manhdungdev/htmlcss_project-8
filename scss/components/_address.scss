@@ -73,28 +73,7 @@
     }
     }
 
-    &__infor {
-      flex: 1;
-    }
-
-    &__view {
-      display: inline-block;
-      padding: 8px;
-      color: #0071dc;
-    }
-
-    &__heading {
-      font-size: 1.8rem;
-      font-weight: 500;
-      line-height: 1.44444;
-    }
-
-    &__desc {
-      width: min(520px, 80%);
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 1.47;
-    }
+    
 
     &__list {
       margin-top: 20px;
@@ -128,10 +107,5 @@
     }
   }
 
-  &-payment {
-    align-items: center;
-    padding: 20px;
-    background: var(--checkout-payment-bg);
-    border-radius: 20px;
-  }
+  
 }
