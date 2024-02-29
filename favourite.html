@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset=" UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check out | Grocery Mart</title>
+    <title>Favourite | Grocery Mart</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
@@ -52,10 +52,9 @@
                             <img src="./assets/icon/arrow-right.svg" alt="arrow icon" class="breadscrumbs__icon">
                         </a>
                     </li>
-
                     <li class="breadscrumbs__item">
                         <a href="#!" class="breadscrumbs__link breadscrumbs__link--current">
-                            Checkout
+                            Favourite
                         </a>
                     </li>
                 </ul>
@@ -63,10 +62,25 @@
 
             <div class="checkout-container">
                 <div class="row gy-xl-3">
-                    <div class="col-8 col-xl-12">
+                    <div class="col-12">
                         <div class="checkout-content">
+                            <h1 class="favourite__heading">Favourite List
+                            </h1>
+                            <p class="favourite__desc">3 items</p>
+
+                            <div class="favourite__check favourite__check--header">
+                                <label class="address-item__checkbox">
+                                    <input type="checkbox" name="check" class="address-item__input">
+                                </label>
+                            </div>
+
                             <div class="checkout-content__list">
-                                <article class="checkout-item">
+                                <article class="checkout-item favourite-item">
+                                    <div class="favourite__check">
+                                        <label class="address-item__checkbox">
+                                            <input type="checkbox" name="check" class="address-item__input">
+                                        </label>
+                                    </div>
                                     <a href="./product-detail.html"> <img src="./assets/img/product/item-1.png"
                                             alt="item" class="checkout-item__thumb"></a>
                                     <div class="checkout-item__content">
@@ -85,6 +99,7 @@
                                                         <img src="./assets/icon/filter-arrow.svg" alt="arrow"
                                                             class="checkout-item__control-icon icon">
                                                     </button>
+
                                                 </div>
                                                 <div class="checkout-item__control">
                                                     <button class="checkout-item__control-btn">
@@ -97,26 +112,35 @@
                                                             class="checkout-item__control-icon icon">
                                                     </button>
                                                 </div>
+                                                <div class="checkout-item__cta">
+                                                    <button class="checkout-item__btn "
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/product-heart.svg" alt="heart" class="
+                                                            checkout-item__icon">
+                                                        Save
+                                                    </button>
+                                                    <button class="checkout-item__btn js-toggle"
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/trash.svg" alt="trash"
+                                                            class="checkout-item__icon">
+                                                        Delete
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$47.00</p>
-                                            <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
-                                                        checkout-item__icon">
-                                                    Save
-                                                </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/trash.svg" alt="trash"
-                                                        class="checkout-item__icon">
-                                                    Delete
-                                                </button>
-                                            </div>
+                                            <button class="btn btn--primary btn--rounded">Check Out</button>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="checkout-item">
+
+                                <article class="checkout-item favourite-item">
+                                    <div class="favourite__check">
+                                        <label class="address-item__checkbox">
+                                            <input type="checkbox" name="check" class="address-item__input">
+                                        </label>
+                                    </div>
                                     <a href="./product-detail.html"> <img src="./assets/img/product/item-2.png"
                                             alt="item" class="checkout-item__thumb"></a>
                                     <div class="checkout-item__content">
@@ -135,6 +159,7 @@
                                                         <img src="./assets/icon/filter-arrow.svg" alt="arrow"
                                                             class="checkout-item__control-icon icon">
                                                     </button>
+
                                                 </div>
                                                 <div class="checkout-item__control">
                                                     <button class="checkout-item__control-btn">
@@ -147,33 +172,42 @@
                                                             class="checkout-item__control-icon icon">
                                                     </button>
                                                 </div>
+                                                <div class="checkout-item__cta">
+                                                    <button class="checkout-item__btn "
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/product-heart.svg" alt="heart" class="
+                                                            checkout-item__icon">
+                                                        Save
+                                                    </button>
+                                                    <button class="checkout-item__btn js-toggle"
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/trash.svg" alt="trash"
+                                                            class="checkout-item__icon">
+                                                        Delete
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="checkout-item__content-right">
                                             <p class="checkout-item__price">$106.00</p>
-                                            <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
-                                                        checkout-item__icon">
-                                                    Save
-                                                </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/trash.svg" alt="trash"
-                                                        class="checkout-item__icon">
-                                                    Delete
-                                                </button>
-                                            </div>
+                                            <button class="btn btn--primary btn--rounded">Check Out</button>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="checkout-item">
+
+                                <article class="checkout-item favourite-item">
+                                    <div class="favourite__check">
+                                        <label class="address-item__checkbox">
+                                            <input type="checkbox" name="check" class="address-item__input">
+                                        </label>
+                                    </div>
                                     <a href="./product-detail.html"> <img src="./assets/img/product/item-3.png"
                                             alt="item" class="checkout-item__thumb"></a>
                                     <div class="checkout-item__content">
                                         <div class="checkout-item__content-left">
                                             <a href="./product-detail.html">
-                                                <h2 class="checkout-item__heading">Qualità Oro Mountain Grown - Espresso
-                                                    Coffee Beans</h2>
+                                                <h2 class="checkout-item__heading">
+                                                    Qualità Oro Mountain Grown - Espresso Coffee Beans</h2>
                                             </a>
                                             <p class="checkout-item__desc">
                                                 $38.65 | <span class="checkout-item__desc--color">In Stock</span>
@@ -185,6 +219,7 @@
                                                         <img src="./assets/icon/filter-arrow.svg" alt="arrow"
                                                             class="checkout-item__control-icon icon">
                                                     </button>
+
                                                 </div>
                                                 <div class="checkout-item__control">
                                                     <button class="checkout-item__control-btn">
@@ -197,99 +232,46 @@
                                                             class="checkout-item__control-icon icon">
                                                     </button>
                                                 </div>
+                                                <div class="checkout-item__cta">
+                                                    <button class="checkout-item__btn "
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/product-heart.svg" alt="heart" class="
+                                                            checkout-item__icon">
+                                                        Save
+                                                    </button>
+                                                    <button class="checkout-item__btn js-toggle"
+                                                        toggle-target="#modal-remove">
+                                                        <img src="./assets/icon/trash.svg" alt="trash"
+                                                            class="checkout-item__icon">
+                                                        Delete
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="checkout-item__content-right">
-                                            <p class="checkout-item__price">$38.65</p>
-                                            <div class="checkout-item__cta">
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/checkout-heart.svg" alt="heart" class="
-                                                        checkout-item__icon">
-                                                    Save
-                                                </button>
-                                                <button class="checkout-item__btn js-toggle" toggle-target="#dialog">
-                                                    <img src="./assets/icon/trash.svg" alt="trash"
-                                                        class="checkout-item__icon">
-                                                    Delete
-                                                </button>
-                                            </div>
+                                            <p class="checkout-item__price">$40.55</p>
+                                            <button class="btn btn--primary btn--rounded">Check Out</button>
                                         </div>
                                     </div>
                                 </article>
+
                             </div>
 
-                            <div class="checkout-content__infor d-md-none">
-                                <div class="row">
-                                    <div class="col-8 col-xxl-7">
-                                        <div class="checkout-continue">
-                                            <a href="./product-detail.html" class="checkout-continue__link">
-                                                <img src="./assets/icon/filter-arrow.svg" alt="arrow"
-                                                    class="checkout-continue__link-icon icon">
-                                                Continue Shopping
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-xxl-5">
-                                        <div class="checkout-infor">
-                                            <div class="checkout-infor__row">
-                                                <p class="checkout-infor__title">Subtotal:</p>
-                                                <p class="checkout-infor__data">$191.65</p>
-                                            </div>
-                                            <div class="checkout-infor__row">
-                                                <p class="checkout-infor__title">Shipping:</p>
-                                                <p class="checkout-infor__data">$10:00</p>
-                                            </div>
-                                            <div class="checkout-infor__separate"></div>
-                                            <div class="checkout-infor__row">
-                                                <p class="checkout-infor__title checkout-infor__title--big">Total:</p>
-                                                <p class="checkout-infor__data checkout-infor__data--big">$201.65</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                            <div class="checkout-content__infor d-md-none favourite-footer">
+                                <div class="checkout-continue">
+                                    <a href="./product-detail.html" class="checkout-continue__link">
+                                        <img src="./assets/icon/filter-arrow.svg" alt="arrow"
+                                            class="checkout-continue__link-icon icon">
+                                        Continue Shopping
+                                    </a>
                                 </div>
+
+                                <button class="btn btn--primary btn--rounded favourite-footer__btn">All Check
+                                    out</button>
                             </div>
+
                         </div>
-                    </div>
-                    <div class="col-4 col-xl-12">
-                        <div class="checkout-infor checkout-pay">
-                            <div class="checkout-infor__row">
-                                <p class="checkout-infor__title">Subtotal (items)</p>
-                                <p class="checkout-infor__data">3</p>
-                            </div>
-                            <div class="checkout-infor__row">
-                                <p class="checkout-infor__title">Price (Total)</p>
-                                <p class="checkout-infor__data">$191.65</p>
-                            </div>
-                            <div class="checkout-infor__row">
-                                <p class="checkout-infor__title">Shipping</p>
-                                <p class="checkout-infor__data">$10.00</p>
-                            </div>
-
-                            <div class="checkout-infor__separate checkout-pay__separate"></div>
-                            <div class="checkout-infor__row">
-                                <p class="checkout-infor__title">Estimated Total</p>
-                                <p class="checkout-infor__data">$201.65</p>
-                            </div>
-
-                            <a href="./shipping.html" class="btn btn--primary btn--rounded checkout-pay__btn">Continue
-                                to
-                                checkout</a>
-                        </div>
-
-                        <a href="#!">
-                            <div class="checkout-gift">
-                                <div class="checkout-gift__wrapper">
-                                    <img src="./assets/icon/gift.svg" alt="gift" class="checkout-gift__img">
-                                </div>
-
-                                <div class="checkout-gift__content">
-                                    <p class="checkout-gift__heading">Send this order as a gift.</p>
-                                    <p class="checkout-gift__desc">Available items will be shipped to your gift
-                                        recipient.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -306,17 +288,19 @@
         load("#footer", "./templates/footer.html");
     </script>
 
-    <!-- Dialog -->
-    <div id="dialog" class="dialog hide">
-        <div class="dialog__content">
-            <div class="dialog__heading">Do you want to remove this item from shopping cart?</div>
-            <div class="dialog__btns">
-                <button toggle-target="#dialog" class="btn js-toggle btn--outline ">Cancel</button>
-                <button toggle-target="#dialog" class="btn js-toggle dialog__btn--delete ">Delete</button>
+    <!-- Modal: confirm remove item -->
+    <div id="modal-remove" class="modal modal--small hide">
+        <!-- <button class="modal__close js-toggle" toggle-target="#modal-remove">&times;</button> -->
+        <div class="modal__content">
+            <div class="modal__heading">Do you want to remove this item from favourite list?</div>
+            <div class="modal__btns">
+                <button toggle-target="#modal-remove" class="btn js-toggle btn--outline ">Cancel</button>
+                <button toggle-target="#modal-remove" class="btn js-toggle modal__btn--delete ">Delete</button>
             </div>
         </div>
-        <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+        <div class="modal__overlay js-toggle" toggle-target="#modal-remove"></div>
     </div>
+
 </body>
 
 </html>

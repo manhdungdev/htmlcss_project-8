@@ -1,0 +1,28 @@
+.favourite {
+  &__heading {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.4545;
+  }
+
+  &__desc {
+    margin-top: 6px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.47;
+  }
+
+  &__check--header {
+    margin: 30px 0;
+  }
+
+  &-item {
+    align-items: flex-start;
+  }
+
+  &-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
