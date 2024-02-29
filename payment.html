@@ -146,7 +146,8 @@
                                         </div>
                                         <div class="payment-item__select">
                                             <span class="address-item__checkbox payment-item__choice">
-                                                <input type="radio" name="check" class="address-item__input payment-item__choice-input" checked>
+                                                <input type="radio" name="check"
+                                                    class="address-item__input payment-item__choice-input" checked>
                                                 <span class="payment-item__choice-data">Free</span>
                                             </span>
                                         </div>
@@ -165,7 +166,8 @@
                                         </div>
                                         <div class="payment-item__select">
                                             <span class="address-item__checkbox payment-item__choice">
-                                                <input type="radio" name="check" class="address-item__input payment-item__choice-input">
+                                                <input type="radio" name="check"
+                                                    class="address-item__input payment-item__choice-input">
                                                 <span class="payment-item__choice-data">$12.00</span>
                                             </span>
                                         </div>
@@ -175,7 +177,50 @@
                         </div>
                     </div>
                     <div class="col-4 col-xl-12">
+
                         <div class="checkout-infor checkout-pay">
+                            <h2 class="checkout__sub-heading">Payment Details</h2>
+                            <p class="checkout-pay__desc">Complete your purchase item by providing your payment details
+                                order.</p>
+                            <form class="form payment-form">
+                                <div class="form__group">
+                                    <label for="name" class="form__heading payment-form__label ">Card Email</label>
+                                    <div class="form__input-wrap">
+                                        <input type="email" name="" id="" class="form__input" placeholder="Email"
+                                            required>
+                                    </div>
+                                    <p class="form__error">Email is not valid</p>
+                                </div>
+                                <div class="form__group">
+                                    <label for="name" class="form__heading payment-form__label ">Card Holder</label>
+                                    <div class="form__input-wrap">
+                                        <input type="text" name="" id="" class="form__input" placeholder="Card holder"
+                                            required>
+                                    </div>
+                                    <p class="form__error">This field must not be empty</p>
+                                </div>
+                                <div class="form__group">
+                                    <label for="name" class="form__heading payment-form__label ">Card Details</label>
+                                    <div class="form__input-wrap">
+                                        <input type="text" name="" id="" class="form__input" placeholder="Card Details"
+                                            required>
+                                    </div>
+                                    <p class="form__error">This field must not be empty</p>
+                                </div>
+
+                                <div class="form__group">
+                                    <div class="form__input-wrap ">
+                                        <input type="text" name="" id="" class="form__input" placeholder="MM/YY"
+                                            >
+                                            <div class="payment-form__separate"></div>
+                                        <input type="text" name="" id="" class="form__input" placeholder="CVC"
+                                            >
+                                    </div>
+                                   
+                                </div>
+
+
+                            </form>
                             <div class="checkout-infor__row">
                                 <p class="checkout-infor__title">Subtotal (items)</p>
                                 <p class="checkout-infor__data">3</p>
@@ -195,8 +240,7 @@
                                 <p class="checkout-infor__data">$201.65</p>
                             </div>
 
-                            <a href="#!" class="btn btn--primary btn--rounded checkout-pay__btn">Continue to
-                                checkout</a>
+                            <a href="#!" class="btn btn--primary checkout-pay__btn">Pay $465.98</a>
                         </div>
 
                         <a href="#!">

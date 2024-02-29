@@ -3895,6 +3895,12 @@ html.dark {
 .checkout-pay__btn {
   margin-top: 48px;
 }
+.checkout-pay__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.47;
+}
 .checkout-gift {
   margin-top: 30px;
   display: flex;
@@ -3980,6 +3986,18 @@ html.dark {
 }
 .payment-item__choice-input:not(:checked)::before {
   filter: var(--payment-select-border);
+}
+.payment-form {
+  margin-bottom: 30px;
+}
+.payment-form__label {
+  margin-bottom: 8px;
+}
+.payment-form__separate {
+  margin: 0 12px;
+  height: 100%;
+  width: 2px;
+  background: #d2d1d6;
 }
 
 h2 {
