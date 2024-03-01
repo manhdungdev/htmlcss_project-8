@@ -46,7 +46,7 @@
 
             <div class="profile-container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-3">
                         <aside class="profile-sidebar">
                             <div class="profile-user">
                                 <img src="./assets/img/avatar/avt-1.jpg" alt="user avatar" class="profile-user__avatar">
@@ -60,7 +60,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/personal_infor.svg" alt="icon"
+                                                <img src="./assets/icon/profile/personal_infor.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Personal info
@@ -69,7 +69,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/address.svg" alt="icon"
+                                                <img src="./assets/icon/profile/address.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Addresses
@@ -78,7 +78,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/privacy.svg" alt="icon"
+                                                <img src="./assets/icon/profile/privacy.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Communications & privacy
@@ -94,7 +94,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/reorder.svg" alt="icon"
+                                                <img src="./assets/icon/profile/reorder.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Reorder
@@ -103,7 +103,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/favourite_list.svg" alt="icon"
+                                                <img src="./assets/icon/profile/favourite_list.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Lists
@@ -112,7 +112,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/registries.svg" alt="icon"
+                                                <img src="./assets/icon/profile/registries.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Registries
@@ -123,12 +123,12 @@
                             </div>
 
                             <div class="profile-menu">
-                                <h3 class="profile-menu__heading">Manage AccountSubscriptions & plans</h3>
+                                <h3 class="profile-menu__heading">Subscriptions & plans</h3>
                                 <ul class="profile-menu__list">
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/protection.svg" alt="icon"
+                                                <img src="./assets/icon/profile/protection.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Protection plans
@@ -143,7 +143,8 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/help.svg" alt="icon" class="profile-menu__icon">
+                                                <img src="./assets/icon/profile/help.svg" alt="icon"
+                                                    class="profile-menu__icon">
                                             </span>
                                             Help
                                         </a>
@@ -151,7 +152,7 @@
                                     <li class="profile-menu__item">
                                         <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
-                                                <img src="./assets/icon/team_of_use.svg" alt="icon"
+                                                <img src="./assets/icon/profile/team_of_use.svg" alt="icon"
                                                     class="profile-menu__icon">
                                             </span>
                                             Teams of Use
@@ -161,7 +162,82 @@
                             </div>
                         </aside>
                     </div>
-                    <div class="col-8"></div>
+                    <div class="col-9">
+                        <div class="profile-content">
+                            <h2 class="profile-content__heading">My Wallet</h2>
+                            <p class="profile-content__desc">Payment methods</p>
+                            <row class="row row-cols-3">
+                                <div class="col">
+                                    <article class="profile-card" style="--profile-card-bg: #1E2E69;">
+                                        <img src="./assets/icon/profile/plane-symbol.svg" alt="symbol"
+                                            class="profile-card__symbol">
+                                        <div class="profile-card__header">
+                                            <img src="./assets/icon/profile/plane.svg" alt="icon"
+                                                class="profile-card__header-icon">
+                                            <p class="profile-card__header-heading">FeatherCard</p>
+                                        </div>
+
+                                        <p class="profile-card__series">1234 4567 8901 2221</p>
+                                        <div class="profile-card__footer">
+                                            <div class="profile-card__footer-infor">
+                                                <p class="profile-card__footer-desc">Card Holder</p>
+                                                <p class="profile-card__footer-name">Imran Khan</p>
+                                            </div>
+
+                                            <div class="profile-card__footer-time">
+                                                <div class="profile-card__footer-expired">Expired</div>
+                                                <time class="profile-card__footer-date">10/22</time>
+                                            </div>
+
+                                            <div class="profile-card__footer-circle"></div>
+                                        </div>
+
+
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="profile-card" style="--profile-card-bg: #354151;">
+                                        <img src="./assets/icon/profile/road-symbol.svg" alt="symbol"
+                                            class="profile-card__symbol">
+                                        <div class="profile-card__header">
+                                            <img src="./assets/icon/profile/leaf.svg" alt="icon"
+                                                class="profile-card__header-icon">
+                                            <p class="profile-card__header-heading">FeatherCard</p>
+                                        </div>
+
+                                        <p class="profile-card__series">1234 4567 8901 2221</p>
+                                        <div class="profile-card__footer">
+                                            <div class="profile-card__footer-infor">
+                                                <p class="profile-card__footer-desc">Card Holder</p>
+                                                <p class="profile-card__footer-name">Imran Khan</p>
+                                            </div>
+
+                                            <div class="profile-card__footer-time">
+                                                <div class="profile-card__footer-expired">Expired</div>
+                                                <time class="profile-card__footer-date">10/22</time>
+                                            </div>
+
+                                            <div class="profile-card__footer-circle"></div>
+                                        </div>
+
+
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <div class="new-card">
+                                            <div class="new-card__wrap">
+                                                <button class="new-card__btn">
+                                                    <img src="./assets/icon/btn-add.svg" alt="add" class="new-card__btn-icon">
+                                                </button>
+                                                <p class="new-card__text">Add New Card</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </row>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -107,4 +107,8 @@ html.dark {
   // Payment
   --payment-select-border: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(57deg)
     brightness(101%) contrast(102%);
+
+  // Profile
+  --profile-content-bg: #171c28;
+  --new-card-color: #b9babe;
 }

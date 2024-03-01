@@ -145,11 +145,13 @@
     width: 2px;
     background: #d2d1d6;
   }
+
+  h2 {
+    counter-increment: heading;
+    &::before {
+      content: counter(heading) ". ";
+    }
+  }
+  
 }
 
-h2 {
-  counter-increment: heading;
-  &::before {
-    content: counter(heading) ". ";
-  }
-}
