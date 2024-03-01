@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Grocery Mart</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header header--sticky"></header>
+    <script>
+        load("#header", "./templates/header-logined.html");
+    </script>
+
+    <!-- Main -->
+    <main class="main profile">
+        <div class="container">
+            <div class="profile-container d-none d-lg-block">
+                <div class="search-bar">
+                    <input type="text" name="" id="" class="search-bar__input" placeholder="Seach for item">
+                    <button>
+                        <img src="./assets/icon/filter-search.svg" alt="search" class="search-bar__icon icon">
+                    </button>
+                </div>
+            </div>
+
+            <div class="profile-container">
+                <div class="row">
+                    <div class="col-4">
+                        <aside class="profile-sidebar">
+                            <div class="profile-user">
+                                <img src="./assets/img/avatar/avt-1.jpg" alt="user avatar" class="profile-user__avatar">
+                                <h1 class="profile-user__name">Imran Khan</h1>
+                                <p class="profile-user__desc">Registered: 17th May 2022</p>
+                            </div>
+
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__heading">Manage Account</h3>
+                                <ul class="profile-menu__list">
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/personal_infor.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Personal info
+                                        </a>
+                                    </li>
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/address.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Addresses
+                                        </a>
+                                    </li>
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/privacy.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Communications & privacy
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__heading">My items</h3>
+                                <ul class="profile-menu__list">
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/reorder.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Reorder
+                                        </a>
+                                    </li>
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/favourite_list.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Lists
+                                        </a>
+                                    </li>
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/registries.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Registries
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__heading">Manage AccountSubscriptions & plans</h3>
+                                <ul class="profile-menu__list">
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/protection.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Protection plans
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__heading">Customer Service</h3>
+                                <ul class="profile-menu__list">
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/help.svg" alt="icon" class="profile-menu__icon">
+                                            </span>
+                                            Help
+                                        </a>
+                                    </li>
+                                    <li class="profile-menu__item">
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon-wrap">
+                                                <img src="./assets/icon/team_of_use.svg" alt="icon"
+                                                    class="profile-menu__icon">
+                                            </span>
+                                            Teams of Use
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-8"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+        load("#footer", "./templates/footer.html");
+    </script>
+
+    <!-- Dialog -->
+    <div id="dialog" class="dialog hide">
+        <div class="dialog__content">
+            <div class="dialog__heading">Do you want to remove this item from shopping cart?</div>
+            <div class="dialog__btns">
+                <button toggle-target="#dialog" class="btn js-toggle btn--outline ">Cancel</button>
+                <button toggle-target="#dialog" class="btn js-toggle dialog__btn--delete ">Delete</button>
+            </div>
+        </div>
+        <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+    </div>
+</body>
+
+</html>
