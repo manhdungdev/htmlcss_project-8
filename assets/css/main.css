@@ -4407,4 +4407,24 @@ html.dark {
   line-height: 1.4286;
 }
 
+.add-cart__header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.add-cart__header-btn {
+  padding: 8px 12px;
+}
+.add-cart__header-heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4545;
+}
+@media screen and (max-width: 991.98px) {
+  .add-cart__row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
