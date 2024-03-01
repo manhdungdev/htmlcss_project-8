@@ -114,15 +114,19 @@ html {
   --modal--bg: #fff;
 
   // Payment
-  --payment-select-border: brightness(0) saturate(100%) invert(78%) sepia(7%) saturate(359%) hue-rotate(206deg) brightness(81%) contrast(85%);
+  --payment-select-border: brightness(0) saturate(100%) invert(78%) sepia(7%) saturate(359%) hue-rotate(206deg)
+    brightness(81%) contrast(85%);
 
   // Profile
   --profile-content-bg: #fff;
   --new-card-color: #d2d1d6;
-  --profile-content-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-link-hover: #ebebeb;
+  --profile-content-shadow: rgba(237, 237, 246, 0.2);
   --profile-infor-img-bg: #fff;
   --profile-infor-bg: #f6f6f6;
-  --profile-item-bg: #D2D1D6;
+  --profile-item-bg: #d2d1d6;
 }
 
 .icon {

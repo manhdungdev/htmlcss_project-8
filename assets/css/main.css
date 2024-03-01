@@ -1312,13 +1312,17 @@ html {
   --checkout-item-border-color: #d2d1d6;
   --checkout-payment-bg: #f6f6f6;
   --modal--bg: #fff;
-  --payment-select-border: brightness(0) saturate(100%) invert(78%) sepia(7%) saturate(359%) hue-rotate(206deg) brightness(81%) contrast(85%);
+  --payment-select-border: brightness(0) saturate(100%) invert(78%) sepia(7%) saturate(359%) hue-rotate(206deg)
+    brightness(81%) contrast(85%);
   --profile-content-bg: #fff;
   --new-card-color: #d2d1d6;
-  --profile-content-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-link-hover: #ebebeb;
+  --profile-content-shadow: rgba(237, 237, 246, 0.2);
   --profile-infor-img-bg: #fff;
   --profile-infor-bg: #f6f6f6;
-  --profile-item-bg: #D2D1D6;
+  --profile-item-bg: #d2d1d6;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1413,10 +1417,13 @@ html.dark {
     brightness(101%) contrast(102%);
   --profile-content-bg: #171c28;
   --new-card-color: #b9babe;
-  --profile-content-shadow: rgba(23, 28, 40, 0.20);
-  --profile-infor-img-bg: #171C28;
-  --profile-infor-bg: #292E39;
-  --profile-item-bg: #292E39;
+  --profile-sidebar-bg: #171c28;
+  --profile-sidebar-shadow: rgba(23, 23, 24, 0.2);
+  --profile-link-hover: #676767;
+  --profile-content-shadow: rgba(23, 28, 40, 0.2);
+  --profile-infor-img-bg: #171c28;
+  --profile-infor-bg: #292e39;
+  --profile-item-bg: #494c53;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1798,6 +1805,7 @@ html.dark {
 .footer__infor {
   display: inline-block;
   margin-top: 8px;
+  line-height: 1.3;
 }
 .footer__bottom {
   margin-top: 50px;
@@ -4104,8 +4112,8 @@ html.dark {
 .profile-sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
 }
 .profile-user {
   width: 100%;
@@ -4156,13 +4164,13 @@ html.dark {
   align-items: center;
   gap: 10px;
   height: 32px;
-  padding: 0 6px;
+  padding: 4px 6px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.47;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: var(--profile-link-hover);
   border-radius: 8px;
 }
 .profile-menu__icon-wrap {
@@ -4183,11 +4191,25 @@ html.dark {
   font-weight: 700;
   line-height: 1.416;
 }
+@media screen and (max-width: 575.98px) {
+  .profile-content__heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44444;
+  }
+}
 .profile-content__desc {
   margin: 4px 0 16px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.47;
+}
+@media screen and (max-width: 575.98px) {
+  .profile-content__desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+  }
 }
 .profile-card {
   position: relative;
@@ -4295,10 +4317,21 @@ html.dark {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 575.98px) {
+  .profile-item {
+    align-items: flex-start;
+  }
+}
 .profile-item__img {
   width: 151px;
   height: 108px;
   object-fit: contain;
+}
+@media screen and (max-width: 575.98px) {
+  .profile-item__img {
+    width: 110px;
+    height: 78px;
+  }
 }
 .profile-item__infor {
   margin-top: 10px;
@@ -4306,24 +4339,54 @@ html.dark {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 575.98px) {
+  .profile-item__infor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .profile-item__heading {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
+}
+@media screen and (max-width: 575.98px) {
+  .profile-item__heading {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.43;
+  }
 }
 .profile-item__price {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.4545;
 }
+@media screen and (max-width: 575.98px) {
+  .profile-item__price {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44444;
+  }
+}
 .profile-item__separate {
   margin: 20px 0;
   height: 1px;
   background: var(--profile-item-bg);
 }
+@media screen and (max-width: 575.98px) {
+  .profile-item__btn {
+    height: 40px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.43;
+  }
+}
 
 .new-card {
   height: 100%;
+  min-height: 175px;
   display: flex;
   justify-content: center;
   align-items: center;
