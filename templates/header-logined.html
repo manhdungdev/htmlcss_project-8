@@ -2127,7 +2127,8 @@
 
                             <div class="cart-footer">
                                 <button>
-                                    <a href="./checkout.html" class="cart-footer__btn btn btn--primary btn--rounded">Check out
+                                    <a href="./checkout.html"
+                                        class="cart-footer__btn btn btn--primary btn--rounded">Check out
                                         all</a>
                                 </button>
                             </div>
@@ -2200,7 +2201,8 @@
 
                             <div class="cart-footer">
                                 <button>
-                                    <a href="./checkout.html" class="cart-footer__btn btn btn--primary btn--rounded">Check out
+                                    <a href="./checkout.html"
+                                        class="cart-footer__btn btn btn--primary btn--rounded">Check out
                                         all</a>
                                 </button>
                             </div>
@@ -2210,6 +2212,51 @@
             </div>
         </div>
 
-        <img src="./assets/img/header-avatar.jpg" alt="Header avatar" class="header__avt" />
+        <div class="header__avt-wrap">
+            <img src="./assets/img/header-avatar.jpg" alt="Header avatar" class="header__avt js-toggle"
+                toggle-target="#avt-content" />
+
+            <div class="cart-wrapper show" id="avt-content">
+                <section class="cart avt-desc">
+                    <img src="./assets/img/filter-arrow-bg.png" alt="arrow" class="cart__arrow icon">
+                    <div class="avt-desc__header">
+                        <img src="./assets/img/header-avatar.jpg" alt="avatar" class="avt-desc__img">
+                        <div class="avt-desc__content">
+                            <p class="avt-desc__name">DungHM</p>
+                            <p class="avt-desc__infor">dunghm@18</p>
+                        </div>
+                    </div>
+
+                    <ul class="avt-desc__list">
+                        <li class="avt-desc__item">
+                            <a href="./profile.html" class="avt-desc__link">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="avt-desc__item">
+                            <a href="./favourite.html" class="avt-desc__link">
+                                Favourite list
+                            </a>
+                        </li>
+                        <li class="avt-desc__item avt-desc__item--separate">
+                            <a href="#!" class="avt-desc__link avt-desc__mode">
+                                <span>Dark mode</span>
+                                <img src="./assets/icon/mode.svg" alt="icon" class="avt-desc__link-icon icon">
+                            </a>
+                        </li>
+                        <li class="avt-desc__item">
+                            <a href="#!" class="avt-desc__link">
+                                Setings
+                            </a>
+                        </li>
+                        <li class="avt-desc__item avt-desc__item--separate">
+                            <a href="./sign-in.html" class="avt-desc__link">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </div>
 </div>

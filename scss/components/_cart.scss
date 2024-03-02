@@ -121,3 +121,47 @@
     }
   }
 }
+
+.avt-desc {
+  width: min(300px, 100vw);
+
+  &__header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__name{
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__list{
+    margin-top: 30px;
+  }
+
+  &__item--separate{
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--menu-border-color);
+  }
+
+  &__link{
+    display: block;
+    padding: 12px 4px;
+  }
+
+  &__mode{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

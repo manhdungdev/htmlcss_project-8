@@ -1559,6 +1559,18 @@ html.dark {
   box-shadow: 0px 4px 14px 2px var(--avt-shadow);
   cursor: pointer;
 }
+.header__avt-wrap {
+  position: relative;
+}
+.header__avt-wrap .cart-wrapper {
+  right: -27px;
+}
+.header__avt-wrap .cart-wrapper.show {
+  display: block;
+}
+.header__avt-wrap .cart__arrow {
+  right: 19px;
+}
 
 .nav {
   margin-left: 129px;
@@ -3089,6 +3101,43 @@ html.dark {
 .cart-footer__btn {
   min-width: 278px;
   border-radius: 99px;
+}
+
+.avt-desc {
+  width: min(300px, 100vw);
+}
+.avt-desc__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avt-desc__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.avt-desc__name {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.avt-desc__list {
+  margin-top: 30px;
+}
+.avt-desc__item--separate {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid var(--menu-border-color);
+}
+.avt-desc__link {
+  display: block;
+  padding: 12px 4px;
+}
+.avt-desc__mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .modal__overlay, .modal {

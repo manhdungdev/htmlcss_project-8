@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add new cart | Grocery Mart</title>
+    <title>Personal | Grocery Mart</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
@@ -58,7 +58,7 @@
                                 <h3 class="profile-menu__heading">Manage Account</h3>
                                 <ul class="profile-menu__list">
                                     <li class="profile-menu__item">
-                                        <a href="./personal.html" class="profile-menu__link">
+                                        <a href="#!" class="profile-menu__link">
                                             <span class="profile-menu__icon-wrap">
                                                 <img src="./assets/icon/profile/personal_infor.svg" alt="icon"
                                                     class="profile-menu__icon icon">
@@ -170,88 +170,56 @@
                                         class="add-cart__header-icon icon">
                                 </a>
 
-                                <h2 class="add-cart__header-heading">Add credit or debit card</h2>
+                                <h2 class="add-cart__header-heading">Personal info</h2>
                             </div>
                             <form action="" class="form add-cart__form">
                                 <div class="form__row add-cart__row">
                                     <div class="form__group">
-                                        <label for="name" class="form__heading form__heading--small">First
+                                        <label for="name" class="form__heading form__heading--small">Full
                                             Name</label>
                                         <div class="form__input-wrap form__input-wrap--small">
                                             <input type="text" name="email" id="name" class="form__input" minlength="2"
-                                                autofocus placeholder="First name" required>
+                                                autofocus placeholder="Full name" required>
                                             <img src="./assets/icon/form/error.svg" alt="error icon"
                                                 class="form__input-error">
                                         </div>
                                         <p class="form__error">Name must be at least 2 characters</p>
                                     </div>
                                     <div class="form__group">
-                                        <label for="last-name" class="form__heading form__heading--small">Last
-                                            name</label>
+                                        <label for="mail" class="form__heading form__heading--small">Email address</label>
                                         <div class="form__input-wrap form__input-wrap--small">
-                                            <input type="text" name="last-name" id="last-name" class="form__input" minlength="2"
-                                                placeholder="Last name" required>
+                                            <input type="email" name="mail" id="mail" class="form__input" minlength="2"
+                                                placeholder="Email" required>
                                             <img src="./assets/icon/form/error.svg" alt="error icon"
                                                 class="form__input-error">
                                         </div>
-                                        <p class="form__error">Phone must be at least 10 numbers</p>
-                                    </div>
-                                </div>
-                                <div class="form__row add-cart__row">
-                                    <div class="form__group">
-                                        <label for="infor" class="form__heading form__heading--small">Card
-                                            Information</label>
-                                        <div class="form__input-wrap form__input-wrap--small">
-                                            <input type="text" name="infor" id="infor" class="form__input" minlength="10"
-                                                autofocus placeholder="Card Number" required>
-                                            <img src="./assets/icon/form/error.svg" alt="error icon"
-                                                class="form__input-error">
-                                        </div>
-                                        <p class="form__error">Card number has at least 10 numbers</p>
-                                    </div>
-                                    <div class="form__group">
-                                        <label for="expiration" class="form__heading form__heading--small">Expriation
-                                            date</label>
-                                        <div class="form__input-wrap form__input-wrap--small">
-                                            <input type="text" name="expiration" id="expiration" class="form__input"
-                                                placeholder="MM/YY" required>
-                                            <img src="./assets/icon/form/error.svg" alt="error icon"
-                                                class="form__input-error">
-                                        </div>
-                                        <p class="form__error">Date is not valid</p>
+                                        <p class="form__error">Mail is not valid</p>
                                     </div>
                                 </div>
 
                                 <div class="form__row add-cart__row">
                                     <div class="form__group">
-                                        <label for="cvv" class="form__heading form__heading--small">CVV</label>
+                                        <label for="phone" class="form__heading form__heading--small">Phone number</label>
                                         <div class="form__input-wrap form__input-wrap--small">
-                                            <input type="text" name="cvv" id="cvv" class="form__input" autofocus
-                                                placeholder="123" required>
-                                            <img src="./assets/icon/form/error.svg" alt="error icon"
-                                                class="form__input-error">
-                                        </div>
-                                        <p class="form__error">CVV must has only numbers</p>
-                                    </div>
-                                    <div class="form__group">
-                                        <label for="phone" class="form__heading form__heading--small">Phone</label>
-                                        <div class="form__input-wrap form__input-wrap--small">
-                                            <input type="tel" name="phone" id="phone" class="form__input" minlength="10"
+                                            <input type="tel" name="phone" id="phone" class="form__input" autofocus
                                                 placeholder="Phone" required>
                                             <img src="./assets/icon/form/error.svg" alt="error icon"
                                                 class="form__input-error">
                                         </div>
-                                        <p class="form__error">Phone must be at least 10 numbers</p>
+                                        <p class="form__error">Phone number must has at least 10 numbers</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="password" class="form__heading form__heading--small">Password</label>
+                                        <div class="form__input-wrap form__input-wrap--small">
+                                            <input type="password" name="password" id="password" class="form__input" minlength="10"
+                                                placeholder="Password" required>
+                                            <img src="./assets/icon/form/error.svg" alt="error icon"
+                                                class="form__input-error">
+                                        </div>
+                                        <p class="form__error">Password is not valid</p>
                                     </div>
                                 </div>
 
-                                <div class="form__group ">
-                                    <label class="form__heading form__heading--small">Card References</label>
-                                    <label class="form__checkbox">
-                                        <input type="checkbox" name="" id="" class="form__checkbox-input" hidden>
-                                        <span class="form__checkbox-label">Set as default card</span>
-                                    </label>
-                                </div>
                                 <div class="modal__btns">
                                     <button class="btn btn--outline ">Cancel</button>
                                     <button type="submit" class="btn  btn--primary">Save Card</button>
